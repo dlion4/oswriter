@@ -11,3 +11,9 @@ class HomeLandingView(TemplateView):
 
 class PricingView(TemplateView):
     template_name = "core/prices.html"
+
+
+class OrderItemView(TemplateView):
+    template_name = "order/base.html"
+
+    
