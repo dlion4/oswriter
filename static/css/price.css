@@ -1,0 +1,457 @@
+body{
+    font-family: 'Sora', sans-serif;
+}
+
+.inner-order-page{
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+a.btn:hover{
+    color: #ffffff;
+}
+
+.inner-order-page .breadcrumbs{
+
+}
+
+.header__nav > ul{
+    flex-direction: row;
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .header__nav > ul.auth_menu{
+        flex-direction: column;
+    }
+}
+
+.prices-wrapper-container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#prices-tab{
+    background: #FFFFFF;
+    border: 2px solid #E3E3E3;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 56px;
+}
+
+.nav-item a{
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    color: #818181;
+    padding: 14px 12px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link{
+    background: #000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-item-sign{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+
+
+.button-group-justified{
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+    width: 100%;
+    margin-right: 5px;
+
+    border: 2px solid #E3E3E3;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+
+.prices-deadline .button-group {
+    position:relative;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    vertical-align:middle;
+    width:100%;
+}
+
+.prices-deadline .button.button-default {
+    border-radius: 4px;
+    color: #676D75;
+    width: 40px !important;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.prices-deadline .button.button-default input{
+    display: none;
+}
+
+
+.prices-deadline .button-group.active .button.button-default,
+.prices-deadline .button.button-default {
+    width: 30px;
+    height: 40px
+}
+.prices-deadline .radio-group.deadline-group .hours-holder,
+.prices-deadline .radio-group.deadline-group .date-holder {
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+    margin-top: 12px;
+    text-transform: uppercase;
+    color: #818181;
+}
+
+.prices-deadline .button-group.active .button {
+    background: #000!important;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+.deadline-group{
+    display: flex;
+}
+
+
+.deadline-divider{
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.prices-deadline{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+body .prices-deadline .currency-group .button.button-default.active,
+body .prices-deadline .currency-group .button.button-default{
+    width: 50px;
+}
+
+.mobile_block{
+    display: none;
+}
+
+.items_wrp{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.price-item-cost{
+   position: relative;
+   min-width: 180px;
+}
+
+
+
+.price-item-cost:hover .name{
+    color: #FE9000;
+}
+
+
+.price-item-cost:before{
+    content: "";
+    position: relative;
+    background: url("/public/img/price-item-bg.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 180px;
+    display: block;
+}
+
+.top_icon{
+    content: "";
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 22px);
+}
+
+.top_icon.high_school_icon{
+    background: url("/public/img/high-school-icon.svg"), #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top_icon.college_icon{
+    background: url("/public/img/college-icon.svg"), #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top_icon.unviersity_icon{
+    background: url("/public/img/unviersity-icon.svg"), #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top_icon.phd_icon{
+    background: url("/public/img/phd.svg"), #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item.active .top_icon.high_school_icon{
+    background: url("/public/img/high-school-icon.svg"), linear-gradient(0deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), linear-gradient(135.32deg, #FFE99A 0%, #FFDCC4 26.56%, #FDD5FE 50.52%, #DBB8F7 73.44%, #AD92FA 100%);;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: none;
+    width: 64px;
+    height: 64px;
+    position: static;
+    margin: auto;
+}
+
+.item.active .top_icon.college_icon{
+    background: url("/public/img/college-icon.svg"), linear-gradient(0deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), linear-gradient(135.32deg, #FFE99A 0%, #FFDCC4 26.56%, #FDD5FE 50.52%, #DBB8F7 73.44%, #AD92FA 100%);;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: none;
+    width: 64px;
+    height: 64px;
+    position: static;
+    margin: auto;
+}
+
+.item.active .top_icon.unviersity_icon{
+    background: url("/public/img/unviersity-icon.svg"), linear-gradient(0deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), linear-gradient(135.32deg, #FFE99A 0%, #FFDCC4 26.56%, #FDD5FE 50.52%, #DBB8F7 73.44%, #AD92FA 100%);;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: none;
+    width: 64px;
+    height: 64px;
+    position: static;
+    margin: auto;
+}
+
+.item.active .top_icon.phd_icon{
+    background: url("/public/img/phd.svg"), linear-gradient(0deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.76)), linear-gradient(135.32deg, #FFE99A 0%, #FFDCC4 26.56%, #FDD5FE 50.52%, #DBB8F7 73.44%, #AD92FA 100%);;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: none;
+    width: 64px;
+    height: 64px;
+    position: static;
+    margin: auto;
+}
+
+.price-item-cost:hover{
+    cursor: pointer;
+}
+
+
+.price-item-cost .name{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    margin-top: 28px;
+    margin-bottom: 14px;
+    color: #000000;
+}
+
+.form-pricing-submit, .graded, .adm_help_text {
+    display: none;
+}
+
+.price{
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, .7);
+}
+
+.price span{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.price-item-col.active{
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.price-item-col.active .price-item-cost{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.price-item-col.active .price-item-cost .name{
+    margin-top: 20px;
+}
+
+.price-item-col.active .price-item-cost::before{
+    background: #fff;
+    position: absolute;
+    z-index: -1;
+}
+
+.price-item-col.active .form-pricing-submit{
+    margin: 25px auto 0 auto;
+}
+
+.form-pricing-submit{
+    width: 119px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    background: #FE9000;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 39px auto 0 auto;
+    display: none;
+}
+.form-pricing-submit:hover{
+    color: #ffffff;
+    text-decoration: none;
+    background: #FE5B00;
+}
+
+.price-item-col.active .price-item-cost .form-pricing-submit{
+    display: flex;
+}
+
+.price-item-col .price-item-cost .adm_help_text p{
+    margin-bottom: 0;
+
+}
+.price-item-col.active .price-item-cost .adm_help_text{
+    font-size: 11px;
+    margin: 20px auto;
+    display: block;
+    background: #ebebeb;
+    padding: 4px 0;
+}
+
+.prices-deadline_mob.mobile_block label{
+    display: block;
+}
+
+.prices-deadline_mob.mobile_block select{
+    width: 100%;
+}
+
+
+#admission-help .items_wrp{
+    justify-content: space-evenly;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    #prices-tab{
+        display: none;
+    }
+    .prices-deadline.desktop_block{
+        display: none;
+    }
+    .prices-deadline_mob.mobile_block{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    .prices-deadline_mob .big_block{
+        max-width: 80%;
+        min-width: 50%;
+    }
+
+    .prices-deadline_mob .flex_block{
+        display: flex;
+    }
+
+    .prices-deadline_mob .flex_block > .block{
+        max-width: 200px;
+        width: 150px;
+        min-width: 150px;
+        margin-left: 15px;
+    }
+
+    .item.price-item-col{
+        margin-bottom: 30px;
+    }
+
+    .price-item-cost {
+        min-height: 240px;
+    }
+
+    .select2-container--default .select2-selection--single{
+        height: 42px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+        line-height: 42px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        top: 9px;
+        right: 8px;
+    }
+    .prices-deadline_mob.mobile_block .block{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .prices-deadline.desktop_block{
+        display: none;
+    }
+    .prices-deadline_mob.mobile_block{
+        display: block;
+    }
+    .prices-deadline_mob.mobile_block .block{
+        margin-bottom: 20px;
+    }
+    .item.price-item-col{
+        margin-bottom: 20px;
+    }
+    .price-item-cost {
+        min-height: 240px;
+    }
+    .items_wrp{
+        justify-content: center;
+    }
+    .select2-container--default .select2-selection--single{
+        height: 42px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+        line-height: 42px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        top: 9px;
+        right: 8px;
+    }
+    .item.price-item-col {
+        margin-bottom: 50px;
+    }
+}

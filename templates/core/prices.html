@@ -1,0 +1,454 @@
+{% extends "base.html" %}
+<!--  -->
+{% load static %}
+{% block title %}
+  
+{% endblock title %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/price.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock extrahead %}
+
+{% block content %}
+<section id="prices" class="prices-wrapper-container">
+    <div class="container" id="price-table-content">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <div class="inner-page inner-order-page">
+                    <div class="center">
+                        <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                            <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <a class="breadcrumbs__link" href="{% url 'core:home' %}" itemprop="item">
+                                    <span itemprop="name">Home</span>
+                                </a>
+                                <meta itemprop="position" content="1">
+                            </span>
+                            <span class="breadcrumbs__separator"></span>
+                            <span class="breadcrumbs__current">Price</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h2>What's the price?</h2>
+                <p class="desk">Price per paper is based on the pages, deadline, academic level, subject, type of work, and extras added. </p>
+                <div class="prices-tabs-section">
+                    <div class="tabs-section">
+                        <div class="d-none d-md-block d-lg-block d-xl-block">
+                            <ul class="nav nav-pills justify-content-between" id="prices-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" data-type-name="writing-scratch" data-form-type="Essay" href="#writing-scratch" role="tab" aria-controls="pills-home" aria-selected="true">Writing from scratch</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" data-type-name="editing-proofreading" data-form-type="Editing/proofreading" href="#editing-proofreading" role="tab" aria-controls="pills-profile" aria-selected="false">Editing/Proofreading</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" data-type-name="multiple-choice-questions" data-form-type="Multiple choice questions" href="#multiple-choice-questions" role="tab" aria-controls="pills-contact" aria-selected="false">Multiple choice questions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" data-type-name="problem-solving" data-form-type="Problem solving" href="#problem-solving" role="tab" aria-controls="pills-contact" aria-selected="false">Problem solving</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" data-type-name="admission-help" data-form-type="Admission essay" href="#admission-help" role="tab" aria-controls="pills-contact" aria-selected="false">Admission help</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="block-select-wrapper-container prices-deadline desktop_block">
+                    <div class="row-form class-empty block_element form-block">
+                        <div class="block-3 class-empty">
+                            <div class="form-item-sign">Deadline:&nbsp;<span class="icon-info icon-help-block" order-tooltip="Please specify the deadline for the first full version of your paper. The deadline starts running when the payment goes through."></span></div>
+                        </div>
+                        <div class="block-9 class-empty">
+                            <div class="row-form radio-group deadline-group">
+                                <div class="block-4" id="block_days">
+                                    <div class="button-group button-group-justified">
+                                        <div class="button-group">
+                                            <label class="button button-default" id="deadline3_label">
+                                                <input data-empty="empty-container" type="radio" name="deadline" value="10435" data-deadline="35">
+                                                <div><span>3</span></div>
+                                            </label>
+                                        </div>
+                                        <div class="button-group ">
+                                            <label class="button button-default" id="deadline6_label">
+                                                <input data-empty="empty-container" type="radio" name="deadline" value="10436" data-deadline="36">
+                                                <div><span>6</span></div>
+                                            </label>
+                                        </div>
+                                        <div class="button-group ">
+                                            <label class="button button-default" id="deadline12_label">
+                                                <input type="radio" name="deadline" value="10437" data-deadline="37">
+                                                <div><span>12</span></div>
+                                            </label>
+                                        </div>
+                                        <div class="button-group ">
+                                            <label class="button button-default" id="deadline24_label">
+                                                <input data-empty="empty-container" type="radio" name="deadline" value="10402" data-deadline="2">
+                                                <div><span>24</span></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="hours-holder">hours</div>
+                                </div>
+                                <div class="deadline-divider">or</div>
+                                <div class="block-8 class-empty re-04">
+                                    <div class="button-group button-group-justified deadline-group">
+                                        <div class="button-group ">
+                                            <label class="button button-default ">
+                                                <input data-empty="empty-container" type="radio" name="deadline" value="10403" data-deadline="3">
+                                                <div><span>2</span></div>
+                                            </label>
+                                        </div>
+                                        <div class="button-group ">
+                                            <label class="button button-default ">
+                                                <input type="radio" name="deadline" value="10404" data-deadline="4">
+                                                <div><span>3</span></div>
+                                            </label>
+                                        </div>
+                                        <div class="button-group ">
+                                            <label class="button button-default ">
+                                                <input data-empty="empty-container" type="radio" name="deadline" value="10408" data-deadline="8">
+                                                <div><span>7</span></div>
+                                            </label>
+                                        </div>
+                                        <div class="button-group ">
+                                            <label order-tooltip="" order-tooltip-save="You cannot order less than 10 pages to be done within the 14 day deadline" class="button button-default">
+                                                <input data-empty="empty-container" type="radio" name="deadline" value="10415" data-deadline="15">
+                                                <div><span>14</span></div>
+                                            </label>
+                                        </div>
+                                        <div class="button-group deadline_tooltip has-info active">
+                                            <label order-tooltip="" order-tooltip-save="You cannot order less than 10 pages to be done within the 20 day deadline" class="button button-default">
+                                                <input data-empty="empty-container" type="radio" name="deadline" value="10439" data-deadline="39" checked="checked">
+                                                <div><span>20</span></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="date-holder">days</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-form class-empty block_element form-block prices-currency">
+                        <div class="block-3 class-empty">
+                            <div class="form-item-sign">Currency:&nbsp;<span class="icon-info icon-help-block" order-tooltip=""></span></div>
+                        </div>
+                        <div class="block-9 class-empty">
+                            <div class="row-form radio-group currency-group">
+                                <div>
+                                    <div class="button-group button-group-justified">
+                                                                                    <div class="button-group  active">
+                                                <label class="button button-default">
+                                                    <input data-empty="empty-container" type="radio" name="currency" value="USD:1" checked="checked">
+                                                    <div><span>USD</span></div>
+                                                </label>
+                                            </div>
+                                                                                    <div class="button-group ">
+                                                <label class="button button-default">
+                                                    <input data-empty="empty-container" type="radio" name="currency" value="EUR:0.917852225791648" checked="checked">
+                                                    <div><span>EUR</span></div>
+                                                </label>
+                                            </div>
+                                                                                    <div class="button-group ">
+                                                <label class="button button-default">
+                                                    <input data-empty="empty-container" type="radio" name="currency" value="CAD:1.337127122533272" checked="checked">
+                                                    <div><span>CAD</span></div>
+                                                </label>
+                                            </div>
+                                                                                    <div class="button-group ">
+                                                <label class="button button-default">
+                                                    <input data-empty="empty-container" type="radio" name="currency" value="GBP:0.807205139972465" checked="checked">
+                                                    <div><span>GBP</span></div>
+                                                </label>
+                                            </div>
+                                                                                    <div class="button-group ">
+                                                <label class="button button-default">
+                                                    <input data-empty="empty-container" type="radio" name="currency" value="AUD:1.405048187241854" checked="checked">
+                                                    <div><span>AUD</span></div>
+                                                </label>
+                                            </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices-deadline_mob mobile_block">
+                    <div class="block big_block">
+                        <label for="type_of_paper_price">Type of service</label>
+                        <select name="type_of_paper_price" id="type_of_paper_price" class="select2_pices">
+                            <option data-value="Essay" selected value="writing-scratch">Writing from scratch</option>
+                            <option data-value="Editing/proofreading" value="editing-proofreading">Editing/Proofreading</option>
+                            <option data-value="Multiple choice questions" value="multiple-choice-questions">Multiple choice questions</option>
+                            <option data-value="Problem solving" value="problem-solving">Problem solving</option>
+                            <option data-value="Admission essay" value="admission-help">Admission help</option>
+                        </select>
+                    </div>
+                    <div class="flex_block">
+                        <div class="block">
+                            <label for="deadline">Deadline</label>
+                            <select name="price-select-test" id="deadline" class="select2_pices">
+                                <option value="10435">3 hours</option>
+                                <option value="10436">6 hours</option>
+                                <option value="10437">12 hours</option>
+                                <option value="10402">24 hours</option>
+                                <option value="10403">2 days</option>
+                                <option value="10404">3 days</option>
+                                <option value="10408">7 days</option>
+                                <option value="10415">14 days</option>
+                                <option selected value="10439">20 days</option>
+                            </select>
+                        </div>
+                        <div class="block">
+                            <label for="currency">Currency</label>
+                            <select  name="currency" id="currency_0" class="select2_pices">
+                                                                    <option   selected value="USD:1">USD</option>
+                                                                    <option   value="EUR:0.917852225791648">EUR</option>
+                                                                    <option   value="CAD:1.337127122533272">CAD</option>
+                                                                    <option   value="GBP:0.807205139972465">GBP</option>
+                                                                    <option   value="AUD:1.405048187241854">AUD</option>
+                                
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="tab-content" id="prices-content">
+                    <div class="tab-pane fade show active" id="writing-scratch" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div class="items_wrp">
+                            <div class="item price-item-col" data>
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon high_school_icon"></div>
+                                    <div class="name">High school</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10406" >10</span> / page</div>
+                                    <div class="graded">12th grader</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item active price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon college_icon"></div>
+                                    <div class="name">Undergraduate</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10401">12</span> / page</div>
+                                    <div class="graded">2-year program</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon unviersity_icon"></div>
+                                    <div class="name">Bachelor</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10403" >18</span> / page</div>
+                                    <div class="graded">Аny Bachelor’s degree</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon phd_icon"></div>
+                                    <div class="name">Professional</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10404" >20</span> / page</div>
+                                    <div class="graded">Master's and higher</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="editing-proofreading" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="items_wrp">
+                            <div class="item price-item-col" data>
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon high_school_icon"></div>
+                                    <div class="name">High school</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10406" >10</span> / page</div>
+                                    <div class="graded">12th grader</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item active price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon college_icon"></div>
+                                    <div class="name">Undergraduate</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10401">12</span> / page</div>
+                                    <div class="graded">2-year program</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon unviersity_icon"></div>
+                                    <div class="name">Bachelor</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10403" >18</span> / page</div>
+                                    <div class="graded">Аny Bachelor’s degree</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon phd_icon"></div>
+                                    <div class="name">Professional</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10404" >20</span> / page</div>
+                                    <div class="graded">Master's and higher</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="multiple-choice-questions" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="items_wrp">
+                            <div class="item price-item-col" data>
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon high_school_icon"></div>
+                                    <div class="name">High school</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10406" >10</span> / page</div>
+                                    <div class="graded">12th grader</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item active price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon college_icon"></div>
+                                    <div class="name">Undergraduate</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10401">12</span> / page</div>
+                                    <div class="graded">2-year program</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon unviersity_icon"></div>
+                                    <div class="name">Bachelor</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10403" >18</span> / page</div>
+                                    <div class="graded">Аny Bachelor’s degree</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon phd_icon"></div>
+                                    <div class="name">Professional</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10404" >20</span> / page</div>
+                                    <div class="graded">Master's and higher</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="problem-solving" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="items_wrp">
+                            <div class="item price-item-col" data>
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon high_school_icon"></div>
+                                    <div class="name">High school</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10406" >10</span> / page</div>
+                                    <div class="graded">12th grader</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item active price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon college_icon"></div>
+                                    <div class="name">Undergraduate</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10401">12</span> / page</div>
+                                    <div class="graded">2-year program</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon unviersity_icon"></div>
+                                    <div class="name">Bachelor</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10403" >18</span> / page</div>
+                                    <div class="graded">Аny Bachelor’s degree</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="top_icon phd_icon"></div>
+                                    <div class="name">Professional</div>
+                                    <div class="price"><span class="table-price-currency">$</span><span class="price-span" data-academic-level="10404" >20</span> / page</div>
+                                    <div class="graded">Master's and higher</div>
+                                    <a href="javascript://" class="link form-pricing-submit">ORDER NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="admission-help" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="items_wrp">
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="price-item hight-school">
+                                        <div class="top_icon high_school_icon"></div>
+                                        <div class="price-item-title name">Writing from <br> scratch</div>
+
+                                        <div class="price">
+                                            <span class="table-price-currency">$</span><span class=""> <span class="price-span" data-type-of-work="1">20</span></span><b class="price-item-t"> / page</b>
+                                        </div>
+
+                                        <div class="adm_help_text link">
+                                            <p>Available through Customer <br> Support in chat</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item price-item-col">
+                                <div class="item_body price-item-cost">
+                                    <div class="price-item hight-school">
+                                        <div class="top_icon college_icon"></div>
+                                        <div class="price-item-title name">Editing/<br>Proofreading</div>
+                                        <div class="price">
+                                            <span class="table-price-currency">$</span><span class=""> <span class="price-span"  data-type-of-work="2">22</span></span><b class="price-item-t"> / page</b>
+                                        </div>
+
+                                        <div class="adm_help_text link">
+                                            <p>Available through Customer <br> Support in chat</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<form action="" target='_top' method="POST" class="form-pricing-block-order" style="display: none">
+    <input type="hidden" name="service_type" value="Essay">
+    <input type="hidden" name="deadline" value="10439">
+    <input type="hidden" name="academic_level" value="2">
+    <input type="hidden" name="pages" value="1">
+</form>
+
+
+
+{% endblock content %}
+
+
+    {% block extrajs %}
+      <script src="/public/js/price_table_new_templates.js"></script>
+
+        <script>
+            $("#prices #prices-content .items_wrp .item").on("click", function () {
+                $(this).closest('.items_wrp').find(".item").removeClass("active");
+                $(this).addClass("active");
+            });
+        </script>  
+
+    {% endblock extrajs %}

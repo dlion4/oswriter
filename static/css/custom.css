@@ -1,0 +1,614 @@
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+        .main__right {
+            width: 47%;
+        }
+        .navbar-nav{
+            flex-direction: row;
+        }
+    a:hover{
+        color: inherit;
+    }
+
+    .calc-new, .calc-block{
+        border-radius: 8px;
+        font-family: 'Sora', sans-serif;
+        height: auto;
+    }
+    .calc-new{
+        padding-top: 18px;
+        border-radius: 30px;
+    }
+    .calc-new .calc-new-wrap{
+        width: 100%;
+        margin: 0;
+        padding: 0 15px;
+    }
+    .calc-new .mainTitle{
+        font-weight: 600;
+        font-size: 20px;
+        color: #000000;
+        margin-bottom: 6px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .price-calculator{
+        max-width: 468px;
+        position: relative;
+        border-radius: 30px;
+    }
+    .price-calculator:before {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        background: #CAD5E7;
+        width: 30px;
+        height: 30px;
+        border: 20px solid transparent;
+        border-top: 20px solid #2C2CEA;
+        border-right: 20px solid #2C2CEA;
+        z-index: 1;
+    }
+
+    .calc-new .btn-group-toggle .btn-custom{
+        background: #fff;
+        width: 23%;
+        color: #4c4c4c;
+        font-family: 'Sora', sans-serif;
+    }
+    .calc-new .btn-group-toggle .btn-custom:hover{
+        opacity: 1;
+    }
+    .calc-new .btn-group-toggle .btn-custom.active{
+        background: #000;
+        opacity: 1;
+    }
+
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+        color: #FE9000;
+        background: transparent;
+    }
+
+    .select2-container--default .select2-results__option .select2-results__option:hover,
+    .select2-container--default .select2-results__option .select2-results__option:focus,
+    .select2-container--default .select2-results__option--selected{
+        background: transparent;
+    }
+
+    .form-group .title-calc{
+        color: #000000;
+    }
+
+    .datetimepicker_wrap .input-group-addon {
+        background: url(https://www.paperhelp.org/assets/img/datapicker-srb.svg) 50% 50% no-repeat;
+        z-index: 2;
+    }
+
+    .calc-new .wrap-inline-block .btn-group-toggle .btn-custom{
+        height: 50px;
+    }
+
+    .calc-new .wrap-inline-block .btn-group-toggle .btn-custom.active {
+        background: #000;
+        color: #fff;
+    }
+
+    .wrap-inline-block .title-calc{
+        color: #000000;
+    }
+
+    .calc-new .date .form-control{
+        border: 2px solid #E3E3E3;
+        box-sizing: border-box;
+        border-radius: 8px;
+        z-index: 2;
+    }
+
+    .calc-new .input-group-addon {
+        background: transparent;
+    }
+
+    .calc-new .d-flex .form-control{
+        height: 50px;
+    }
+
+
+    .btn-procide-calc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 182px;
+        height: 48px;
+        background: #FE9000;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        transition: all .25s;
+    }
+    .btn-procide-calc:hover{
+        text-decoration: none;
+        color: #ffffff;
+        background: #FE5B00;
+    }
+
+    .calc-new .price-total{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+
+
+    .info-tooltip-wrap::before{
+        transform: rotate(180deg);
+        top: -18px;
+        bottom: auto;
+    }
+
+    .info-tooltip-wrap::after{
+        bottom: auto;
+        top: -8px;
+        transform: rotate(180deg);
+    }
+
+    .info-tooltip-wrap {
+        left: calc(50% - 272px);
+        top: 31px;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered{
+        font-weight: bold;
+    }
+
+    #company-nav{
+        flex-direction: column;
+    }
+
+    .bootstrap-datetimepicker-widget .fa-clock-o::after,
+    .bootstrap-datetimepicker-widget .fa-calendar::after{
+        font-family: 'Gotham Pro', sans-serif!important;
+        font-style: normal!important;
+        font-size: 12px!important;
+    }
+
+
+    .bootstrap-datetimepicker-widget .table-condensed .btn-primary{
+        border-radius: 50%;
+        background: #000;
+        color: #ffffff;
+    }
+
+    .table-condensed{
+        margin-top: 20px;
+    }
+
+    .table-condensed .btn{
+        background: transparent;
+    }
+
+    .bootstrap-datetimepicker-widget table td span,
+    .bootstrap-datetimepicker-widget table td i{
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .bootstrap-datetimepicker-widget table td {
+        height: 38px;
+        line-height: 38px;
+        width: 54px;
+    }
+
+    .bootstrap-datetimepicker-widget a[data-action] {
+        padding: 2px 0;
+    }
+
+    .bootstrap-datetimepicker-widget table td span:hover,
+    .bootstrap-datetimepicker-widget table td i:hover {
+        background: transparent !important;
+        color: #000000;
+    }
+    .fa-calendar::before {
+        display: none;
+    }
+
+
+    .calc-new .bootstrap-datetimepicker-widget .prev {
+        background: url("/public/img/date-arrow.svg") no-repeat 50% 50%!important;
+    }
+    .calc-new .bootstrap-datetimepicker-widget .prev:hover{
+        background: url("/public/img/date-arrow.svg"), #F2F2F2!important;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+    }
+
+    .calc-new .bootstrap-datetimepicker-widget .next {
+        background: url("/public/img/date-arrow.svg") no-repeat 50% 50%!important;
+        transform: rotate(-180deg);
+    }
+    .calc-new .bootstrap-datetimepicker-widget .next:hover{
+        background: url("/public/img/date-arrow.svg"), #F2F2F2!important;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow b{
+        border: none;
+        border-color: transparent;
+        background: url("/public/img/select2-drop-arrow.svg");
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 10px;
+        opacity: 0.5;
+    }
+
+    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+        border: none;
+        border-color: transparent;
+        background: url("/public/img/select2-drop-arrow.svg");
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 10px;
+        transform: rotate(180deg);
+        background-position: 0 3px;
+    }
+
+    @media (max-width: 991px) {
+        .container{
+            width: 100%;
+        }
+        .main__right {
+            width: 100%;
+        }
+        .calc-new, .calc-block{
+            height: auto;
+        }
+        .calc-new .d-flex .form-control {
+            width: 388px;
+        }
+        .info-tooltip-wrap{
+            left: 0;
+            position: absolute;
+        }
+        .info-tooltip-wrap::before{
+            left: calc(39% - 3px);
+        }
+        .info-tooltip-wrap::after{
+            left: calc(39% - 4px);
+        }
+    }
+
+    @media (max-width: 767px) {
+        .calc-new{
+            padding-bottom: 0px;
+        }
+        .btn-group-lenght{
+            max-width: 136px;
+        }
+        .calc-new .wrap-inline-block .d-flex .btn-group-toggle{
+            max-width: 100%;
+        }
+        .datetimepicker_wrap {
+            padding-left: 15px!important;
+        }
+        .price-calculator #datetimepicker{
+            max-width: 100%!important;
+        }
+        .calc-selected-calculations .pages-lbl-tooltip.tooltip-calculations-show+.d-flex{
+            flex-wrap: wrap;
+        }
+        .calc-selected-calculations .col-problems-count{
+            text-align: right;
+            margin: 0 0 -15px 0;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+
+
+    .price-calculator{
+        background: #FFFFFF;
+        border: 1px solid #CAD5E7;
+        padding: 18px 16px 0 16px;
+        border-radius: 30px;
+        position: relative;
+    }
+
+    .price-calculator:before{
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        background: #CAD5E7;
+        width: 30px;
+        height: 30px;
+        border: 20px solid transparent;
+        border-top: 20px solid #2C2CEA;
+        border-right: 20px solid #2C2CEA;
+    }
+
+    .price-calculator .btn-group-level{
+        justify-content: space-between;
+    }
+
+    .price-calculator .btn-group-level .btn-custom{
+        background: #F4F7FF;
+        border-radius: 4px!important;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        padding: 19px 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: auto!important;
+    }
+
+    .price-calculator .btn-group-level .btn-custom.active{
+        background: #394BEC!important;
+        margin: 0;
+        padding: 19px 10px;
+        border-radius: 4px!important;
+    }
+
+    .price-calculator .btn-group-level .btn-custom .svg_wrapper{
+        margin-bottom: 4px;
+    }
+
+    .price-calculator .btn-group-level .btn-custom.active .svg_wrapper svg,
+    .price-calculator .btn-group-level .btn-custom.active .svg_wrapper path{
+        fill: #fff
+    }
+
+    .price-calculator .btn-group-lenght .btn-custom.active{
+        background: #394BEC!important;
+        border-radius: 4px!important;
+    }
+
+    .price-calculator .btn-group-level .btn-custom.active:before,
+    .price-calculator .btn-group-lenght .btn-custom.active:before,
+    .btn-procide-calculator span::before{
+        display: none;
+    }
+
+    .price-calculator .btn-group-lenght .btn-custom{
+        background: #F4F7FF;
+        border-radius: 4px;
+    }
+
+    .btn-procide-calculator{
+        background: #FE9000;
+        border-radius: 4px;
+        width: 218px;
+        height: 48px;
+    }
+
+    .btn-procide-calculator span{
+        height: 48px;
+        line-height: 48px;
+        padding: 0;
+        text-transform: capitalize;
+    }
+
+    .btn-procide-calculator:hover,
+    .btn-procide-calculator:focus{
+        width: 218px;
+        height: 48px;
+    }
+
+    .select2-container .select2-selection--single .select2-selection__rendered{
+        background: #F4F7FF;
+        border: 1px solid #CAD5E7;
+        box-sizing: border-box;
+        border-radius: 4px;
+
+    }
+
+    .calc-new .block-academic-level{
+        margin: 30px 0 0 0;
+    }
+
+    .select2-container .select2-selection--single{
+        border: none!important;
+    }
+
+
+    .price-calculator #pages,
+    .price-calculator #words,
+    .price-calculator #datetimepicker{
+        background: #F4F7FF;
+        border: 1px solid #CAD5E7;
+        box-sizing: border-box;
+        border-radius: 4px!important;
+    }
+
+    .datetimepicker_wrap .input-group-addon{
+        background: url(https://www.paperhelp.org/assets/img/datapicker-srb.svg) 50% 50% no-repeat;
+    }
+
+    .calc-new .footer_part_calc{
+        background: #F4F7FF;
+        border-radius: 0 0 30px 30px;
+        padding: 20px 0;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        align-items: center;
+        border-top: 1px solid #CAD5E7;
+        width: auto;
+    }
+
+    .price-calculator .footer_part_calc .title-calc{
+        margin-bottom: 4px;
+    }
+
+    .flex_wrapper_middle{
+        display: flex;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        display: block;
+    }
+
+
+    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+        border-color: transparent transparent #676767 transparent;
+        border-width: 0 5px 7px 5px;
+    }
+
+    .price-calculator .price-total{
+        font-size: 28px;
+    }
+
+    .price-calculator .title-calc{
+        font-size: 12px;
+        color: #666666;
+    }
+
+    .calc_title_text{
+        font-size: 20px;
+        color: #000000;
+        font-weight: 600;
+        margin-bottom: 6px;
+        text-align: center;
+    }
+
+    .datetimepicker_wrap{
+        width: 48.5%;
+        padding-left: 0;
+    }
+
+    .price-calculator #datetimepicker{
+        max-width: 204px;
+        font-weight: 500;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .price-calculator #pages,
+    .price-calculator #words{
+        width: 80px;
+    }
+
+    .calc-new .date .icon-close-datetimepicker{
+        right: 6px;
+    }
+
+
+    .input-group.date .input-group-addon{
+        pointer-events: none;
+    }
+
+
+    .datepricker-new-addon .bootstrap-datetimepicker-widget .picker-switch td span,
+    .datepricker-new-addon .bootstrap-datetimepicker-widget .picker-switch td i{
+        background: #6776ff!important;
+
+    }
+
+    .datepricker-new-addon .datetimepicker-confirm{
+        background: #394BEC!important;
+    }
+
+    .bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover{
+        background: #394BEC!important;
+    }
+
+    .bootstrap-datetimepicker-widget .table-condensed .btn-primary{
+        background: #394BEC;
+        border: 1px solid #394BEC;
+    }
+
+    .bootstrap-datetimepicker-widget table td span:hover, .bootstrap-datetimepicker-widget table td i:hover {
+        background: #394BEC;
+    }
+
+    .table-condensed a {
+        color: #394BEC;
+    }
+
+    @media (max-width: 453px){
+
+        body{
+            overflow-y: visible;
+        }
+
+        .price-calculator{
+            padding: 13px 10px 0 10px;
+        }
+
+        .price-calculator .btn-group-level .btn-custom:last-child {
+            border-left: none;
+            border-top: none !important;
+        }
+        .price-calculator .btn-group-level .btn-custom:nth-child(2) {
+            border-bottom: none;
+        }
+        .flex_wrapper_middle{
+            flex-direction: column;
+        }
+        .datetimepicker_wrap{
+            width: 100%;
+        }
+        .price-calculator #datetimepicker{
+            max-width: 100%;
+        }
+        .price-calculator .btn-group-lenght {
+            width: 75%;
+            margin-right: 0;
+        }
+        .price-calculator .btn-group-level .btn-custom{
+            padding: 10px 4px!important;
+        }
+        .price-calculator .btn-group-level .btn-custom{
+            font-size: 10px!important;
+        }
+
+        .btn-procide-calculator{
+            width: 130px;
+        }
+
+        .btn-procide-calculator:hover,
+        .btn-procide-calculator:focus{
+            width: 130px;
+        }
+
+        .price-calculator:before{
+            content: ""!important;
+            display: block!important;
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            background: #CAD5E7;
+            width: 28px;
+            height: 28px;
+            border: 18px solid transparent;
+            border-top: 18px solid #2C2CEA;
+            border-right: 18px solid #2C2CEA;
+        }
+        .datetimepicker_wrap{
+            padding-left: 15px;
+        }
+        .calc-new .wrap-inline-block .btn-group-toggle .btn-custom{
+            width: 50%;
+        }
+
+    }

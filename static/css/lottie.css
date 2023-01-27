@@ -1,0 +1,71 @@
+    
+            #lottie-wrapper {
+                position: fixed;
+                z-index: 99;
+                bottom: 40px !important;
+                right: 32px !important;
+            }
+
+            #lottie-block {
+                z-index: 9;
+                overflow: hidden;
+                position: fixed;
+                height: 70px;
+                border-radius: 50%;
+                width: 70px;
+                bottom: 15px !important;
+                right: 20px !important;
+                background: transparent !important;
+                box-shadow: 2px 2px 6px rgb(0 0 0 / 40%);
+                cursor: pointer;
+            }
+            #lottie-block #contactButton {
+                position: absolute;
+                left: -214px;
+                top: -288px;
+                width: 500px;
+                height: 500px;
+                display: block;
+                overflow: hidden;
+                text-align: center;
+                opacity: 1;
+                cursor: pointer;
+            }
+            #contactButton {
+                z-index: 99;
+                position: fixed;
+                height: 70px;
+                width: 70px;
+                bottom: 40px !important;
+                right: 40px !important;
+            }
+            #lottie-wrapper #contacts-btn {
+                top: 289px;
+                left: 215px;
+                display: inline-block;
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                border: none;
+                background-repeat: no-repeat;
+                background-position: center center;
+                -webkit-transition: all .3s ease;
+                -o-transition: all .3s ease;
+                transition: all .3s ease;
+                -webkit-animation: floatbtnanim 5s infinite;
+                animation: floatbtnanim 5s infinite;
+                background: #FE9000;
+                background-repeat: no-repeat;
+            }
+            #contacts-btn {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                z-index: 100;
+                cursor: pointer;
+            }
+
+            #lottie-wrapper #lottie-block #contacts-btn {
+                background-image: url(/speech-bubbles.svg);
+                background-position: center;
+            }
