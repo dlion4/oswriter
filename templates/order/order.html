@@ -1,545 +1,101 @@
 {% extends "order/base.html" %}
 
 {% block order %}
-<form  method="" id="_order_form" class="" enctype="multipart/form-data" >
+<form  method="post" id="order-form1" action="{% url 'core:order' %}">
+    {% csrf_token %}
     <div class="row justify-content-center">
     <div class="order-setep__wrapper">    
     <div id="order-form" class="order-form-pay">  
 
     <div id="tab-1" class="tab-contents active-step">
     <div class="order-form-inner">
-    <div class="row form-block row__academic-level" id="_academic_level">
+    <div class="row form-block row__academic-level">
     <div class="container-12 academic-level-block">
         <div class="wrap-lable academic_level_error_place" data-ph-tst="of-acdm_lvl">
             Academic Level
-            <div class="info-tooltip"></div>
-            <div class="info-tooltip-wrap" style="display: none;">
-                <div class="info-tooltip-title">
-                    How to choose academic level:
-                    <button class="close-mob-tooltip btn" type="button"></button>
+          
+        </div>
+                 <div class="wrap-select-arrow block-subject">
+                    <select id="level"  name="level" class="form-control select__custom select2-of" title="level" required>
+                        <option value="HS">High School</option>
+                        <option value="UG">Undergraduate</option>
+                        <option value="BD">Bachelor</option>
+                        <option value="HS">High School</option>
+                        <option value="PR">Professional</option>
+                    </select>
                 </div>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td>High school</td>
-                        <td>12th grader</td>
-                    </tr>
-                    <tr>
-                        <td>Undergraduate</td>
-                        <td>2-year program</td>
-                    </tr>
-                    <tr>
-                        <td>Bachelor</td>
-                        <td>Аny Bachelor’s degree</td>
-                    </tr>
-                    <tr>
-                        <td>Professional</td>
-                        <td>Master's and higher</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="block-academic-level">
-            <div class="btn-group btn-group-level btn-group-toggle d-flex justify-content-around"
-                 data-toggle="buttons">
-                <label data-ph-tst="of-hischl"
-                       class="btn btn-secondary btn-custom ">
-                    <input type="radio" name="academic_level" value="10406"
-                           data-academ-level-name="High School" id="academic_levelUND" autocomplete="off"
-                           >
-                    High School
-                </label>
-                <label data-ph-tst="of-colg"
-                       class="btn btn-secondary btn-custom active">
-                    <input type="radio" name="academic_level" value="10401" data-academ-level-name="Undergraduate"
-                           id="academic_levelBACH" autocomplete="off"
-                           checked>
-                    Undergraduate
-                </label>
-                <label data-ph-tst="of-unrst"
-                       class="btn btn-secondary btn-custom ">
-                    <input type="radio" name="academic_level" value="10403"
-                           data-academ-level-name="Bachelor" id="academic_levelBACH" autocomplete="off"
-                           >
-                    Bachelor
-                </label>
-                <label data-ph-tst="of-phd"
-                       class="btn btn-secondary btn-custom ">
-                    <input type="radio" name="academic_level" value="10404" data-academ-level-name="Professional"
-                           id="academic_levelPROF" autocomplete="off"
-                           >
-                    Professional
-                </label>
-            </div>
-        </div>
-        <div class="dissert-ac-level" style="display: none;"><strong>Note:</strong> Only '<span
-                    class="change_ab_test">Professional</span>' academic level option is available for Dissertation
-        </div>
-        <div class="hide-some-ak-level" style="display: none;"><strong>Note:</strong> "<span
-                    data-init-ak-level=''></span>" is the initial academic level option for <span
-                    data-init-type-of-paper=""></span></div>
     </div>
 </div>
         <div class="row form-block">
             <div class="form-block-top w-100">
                 <div class="container-12" data-hide-block-calculations="" data-ignore-for-excel="1">
-                                        <div class="wrap-lable type_of_paper_error_place" data-ph-tst="of-t_of_p">Type of Paper</div>
+                    <div class="wrap-lable type_of_paper_error_place" data-ph-tst="of-t_of_p">Type of Paper</div>
                         <div class="wrap-select-arrow block-type-of-paper">
-                            <select id="type_of_paper" name="type_of_paper"
+                            <select id="type_of_paper" name="paper" required
                                     class="dynamic-hints paper_type_select_class form-element select2-of">
-                                    <option data-top-category=""
-                                            value="1041073" >
+                                    <option
+                                            value="Online Lecture to Summary" >
                                         Online Lecture to Summary
                                     </option>
-                                    <optgroup label="Essays">
-                                        <option data-top-category="1"
-                                                value="1040016" >
-                                            Annotated bibliography
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040017" >
-                                            Argumentative essay
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040033" >
-                                            Article
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040015" >
-                                            Article review
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040019" >
-                                            Biography
-                                        </option>
-                                        <option data-top-category="1"                                             value="1040040">Blog writing
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040005" >
+                                       
+                                        <option 
+                                                value="Book review" >
                                             Book review
                                         </option>
-                                        <option data-top-category="1"
-                                                value="1040012" >
+                                        <option
+                                                value="Business plan" >
                                             Business plan
                                         </option>
-                                        <option data-top-category="1"
-                                                value="1040034" >
+                                        <option 
+                                                value="Capstone project" >
                                             Capstone project
                                         </option>
-                                        <option data-top-category="1"
-                                                value="1040013" >
+                                        <option 
+                                                value="Case study" >
                                             Case study
                                         </option>
-                                        <option data-top-category="1"
-                                                value="1040008" >
-                                            Coursework
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040001" >
-                                            Creative writing
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040018" >
-                                            Critical thinking
-                                        </option>
-                                                                            <option data-top-category="1"
-                                                value="1040002" selected >
-                                            Essay
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1041043" >
-                                            Exam notes
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1041046" >
-                                            Lab report
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040024" >
-                                            Literature review
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040006" >
-                                            Movie review
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1041045" >
-                                            Poster presentation
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040004" >
-                                            Presentation
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040060" >
-                                            Question & Answer
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1041044" >
-                                            Reflective report
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040030" >
-                                            Report
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040003" >
-                                            Research paper
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040009" >
-                                            Research proposal
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040056" >
-                                            Speech
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040007" >
-                                            Term paper
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040011" >
-                                            Thesis
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1040028" >
-                                            Thesis proposal
-                                        </option>
-                                        <option data-top-category="1"
-                                                value="1041037" >
-                                            Thesis statement
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="Dissertation">
-                                        <option data-top-category="4"
-                                                value="1040010" >
-                                            Dissertation
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1040021" >
-                                            Dissertation abstract
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1040020" >
-                                            Dissertation chapter
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1040027" >
-                                            Dissertation conclusion
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1040023" >
-                                            Dissertation hypothesis
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1040022" >
-                                            Dissertation introduction
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1040025" >
-                                            Dissertation methodology
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1041034" >
-                                            Dissertation proposal
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1040026" >
-                                            Dissertation results
-                                        </option>
-                                        <option data-top-category="4"
-                                                value="1041047" >
-                                            Dissertation topics
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="Homework Help">
-                                        <option data-top-category="7"
-                                                value="1040066" >
-                                            Biology Assignment
-                                        </option>
-                                        <option data-top-category="7"
-                                                value="1040065" >
-                                            Chemistry Assignment
-                                        </option>
-                                        <option data-top-category="7"
-                                                value="1040064" >
-                                            Engineering Assignment
-                                        </option>
-                                        <option data-top-category="7"
-                                                value="1040067" >
-                                            Geography Assignment
-                                        </option>
-                                        <option data-top-category="7"
-                                                value="1040062" >
-                                            Math Assignment
-                                        </option>
-                                        <option data-top-category="7"
-                                                value="1040063" >
-                                            Physics Assignment
-                                        </option>
-                                        <option data-top-category="7"
-                                                value="1040061" >
-                                            Programming Assignment
-                                        </option>
-                                        <option data-top-category="7"
-                                                value="1040068" >
-                                            Other Assignment
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="Questions & Problems">
-                                                                            <option data-top-category="2"
-                                                value="1041038" >
-                                            Multiple choice questions
-                                        </option>
-                                        <option data-top-category="2"
-                                                value="1041039" >
-                                            Problem solving
-                                        </option>
-                                        <option data-top-category="2"
-                                                value="1040043" >
-                                            Rewriting
-                                        </option>
-                                    </optgroup>
-                                    <optgroup label="Admissions">
-                                        <option data-top-category="3"
-                                                value="1040014" >
-                                            Admission essay
-                                        </option>
-                                        <option data-top-category="3"
-                                                value="1040029" >
-                                            Application letter
-                                        </option>
-                                        <option data-top-category="3"
-                                                value="1040031" >
-                                            Cover letter
-                                        </option>
-                                        <option data-top-category="3"
-                                                value="1040058" >
-                                            Curriculum vitae
-                                        </option>
-                                        <option data-top-category="3"
-                                                value="1040032" >
-                                            Personal statement
-                                        </option>
-                                        <option data-top-category="3"
-                                                value="1040059" >
-                                            Resume
-                                        </option>
-                                    </optgroup>
-                                                                        <option data-top-category=""
-                                                value="1041040"                                            style="font-weight: bold;">Editing/proofreading
-                                        </option>
-                                                                    <option data-top-category=""
-                                            value="1041041"                                        style="font-weight: bold;">Typing
-                                    </option>
-                                    <option data-top-category=""
-                                            value="1040999" >
-                                        Other
-                                    </option>
-                                                        </select>
+                             </select>
                         </div>
                                 </div>
-
-                <div class="slides_st1_wrap col-6 col-md-3 col-lg-3 _slides-block-step-1" style="display:none">
-                    <div class="wrap-lable">Slides</div>
-                    <div class="plus-minus-input d-flex">
-                        <div class="input-group-button">
-                            <button type="button" class="button hollow circle _slides_decr disabled" data-quantity="minus" data-field="slides">
-                                <img src="/public/order_form2/img/input-minus.svg" alt="" />
-                            </button>
-                        </div>
-                        <input   data-column-name="slides" maxlength="3" name="" id="presentation_slides" class="input-group-field _slides  _slides-input-step-1" type="text" value="1">
-                        <div class="input-group-button">
-                            <button type="button" class="button hollow circle _slides_incr disabled" data-quantity="plus" data-field="slides">
-                                <img src="/public/order_form2/img/input-plus.svg" alt="" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="wrap-lable slides_error_place text-left"></div>
-                </div>
-            </div>
-
-            <div class="container-12 subject-area-placeholder col" data-show-block-calculations="" data-ignore-for-excel="1" style="display: none">
-                <div class="wrap-lable">Subject area</div>
-                <div class="wrap-select-arrow">
-                    <select data-column-name="subject" name=""
-                            class="subject-area-select form-element select2-of"
-                            id="subject-calculations" data-placeholder="Choose">
-                        <option></option>
-                        <option value="1" >Accounting</option>
-                        <option value="34" >Biology</option>
-                        <option value="5" >Business</option>
-                        <option value="35" >Chemistry</option>
-                        <option value="59" >Computer Science</option>
-                        <option value="9" >Economics</option>
-                        <option value="38" >Engineering</option>
-                        <option value="14" >Finance</option>
-                        <option value="73" >Financial Management</option>
-                        <option value="41" >Geography</option>
-                        <option value="51" >Geology</option>
-                        <option value="64" >Logic</option>
-                        <option value="19" >Mathematics</option>
-                        <option value="20" >Medicine</option>
-                        <option value="56" >Nutrition</option>
-                        <option value="1021" >Pharmacology</option>
-                        <option value="36" >Physics</option>
-                        <option value="72" >Science</option>
-                        <option value="40" >Statistics</option>
-                        <option value="29" >Technology</option>
-                    </select>
-                </div>
-                <div class="wrap-lable subject_error_place text-left"></div>
-            </div>
-
-            <div class="alert-danger-with-icon alert-danger-margin pr-slides-spn-step1-limit-error" style="display: none">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.62988C12.4142 8.62988 12.75 8.96567 12.75 9.37988V13.1199C12.75 13.5341 12.4142 13.8699 12 13.8699C11.5858 13.8699 11.25 13.5341 11.25 13.1199V9.37988C11.25 8.96567 11.5858 8.62988 12 8.62988ZM11 16.3776C10.9975 15.8214 11.4487 15.3749 11.999 15.3749C12.5503 15.3749 13 15.8207 13 16.3749C13 16.9271 12.5522 17.3749 12 17.3749C11.4487 17.3749 11.0015 16.9286 11 16.3776ZM11.5 16.3767L11 16.3803C11 16.3794 11 16.3785 11 16.3776C11 16.3767 11 16.3758 11 16.3749H11.5C11.5 16.3755 11.5 16.3761 11.5 16.3767ZM12.5 16.3694C12.5 16.3713 12.5 16.3731 12.5 16.3749L12.5 16.3694ZM12.5 16.3749L12.5 16.3694L12.5 16.3749Z" fill="#F32C50"/><path d="M14.029 4.139L21.688 17.543C22.578 19.101 21.453 21.04 19.659 21.04H4.34101C2.54601 21.04 1.42101 19.101 2.31201 17.543L9.97101 4.139C10.868 2.568 13.132 2.568 14.029 4.139Z" stroke="#F32C50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <div class="alert-danger-inner error-exceeds-deadline">
-                    Exceeds max amount on a <strong><span class="hours-limit">N-hour</span> deadline - <span class="slides-limit">Х slides</span> or <span class="speaker_notes-limit">У speaker notes</span></strong> (1 speaker note = 2 slides).
-                </div>
-            </div>
-            <div class="alert-danger-with-icon alert-danger-margin slides-pages-limit-step1-error" style="display: none">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.62988C12.4142 8.62988 12.75 8.96567 12.75 9.37988V13.1199C12.75 13.5341 12.4142 13.8699 12 13.8699C11.5858 13.8699 11.25 13.5341 11.25 13.1199V9.37988C11.25 8.96567 11.5858 8.62988 12 8.62988ZM11 16.3776C10.9975 15.8214 11.4487 15.3749 11.999 15.3749C12.5503 15.3749 13 15.8207 13 16.3749C13 16.9271 12.5522 17.3749 12 17.3749C11.4487 17.3749 11.0015 16.9286 11 16.3776ZM11.5 16.3767L11 16.3803C11 16.3794 11 16.3785 11 16.3776C11 16.3767 11 16.3758 11 16.3749H11.5C11.5 16.3755 11.5 16.3761 11.5 16.3767ZM12.5 16.3694C12.5 16.3713 12.5 16.3731 12.5 16.3749L12.5 16.3694ZM12.5 16.3749L12.5 16.3694L12.5 16.3749Z" fill="#F32C50"/><path d="M14.029 4.139L21.688 17.543C22.578 19.101 21.453 21.04 19.659 21.04H4.34101C2.54601 21.04 1.42101 19.101 2.31201 17.543L9.97101 4.139C10.868 2.568 13.132 2.568 14.029 4.139Z" stroke="#F32C50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <div class="alert-danger-inner error-exceeds-deadline">
-                    Exceeds max amount on a <strong><span class="hours-limit">N-hour</span> deadline - <span class="pages-limit">Х pages</span> or <span class="slides-limit">Y slides</span></strong> (1 page = 2 slides).
-                </div>
-            </div>
-            <div class="alert-danger-with-icon alert-danger-margin charts-pages-limit-step1-error" style="display: none">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.62988C12.4142 8.62988 12.75 8.96567 12.75 9.37988V13.1199C12.75 13.5341 12.4142 13.8699 12 13.8699C11.5858 13.8699 11.25 13.5341 11.25 13.1199V9.37988C11.25 8.96567 11.5858 8.62988 12 8.62988ZM11 16.3776C10.9975 15.8214 11.4487 15.3749 11.999 15.3749C12.5503 15.3749 13 15.8207 13 16.3749C13 16.9271 12.5522 17.3749 12 17.3749C11.4487 17.3749 11.0015 16.9286 11 16.3776ZM11.5 16.3767L11 16.3803C11 16.3794 11 16.3785 11 16.3776C11 16.3767 11 16.3758 11 16.3749H11.5C11.5 16.3755 11.5 16.3761 11.5 16.3767ZM12.5 16.3694C12.5 16.3713 12.5 16.3731 12.5 16.3749L12.5 16.3694ZM12.5 16.3749L12.5 16.3694L12.5 16.3749Z" fill="#F32C50"/><path d="M14.029 4.139L21.688 17.543C22.578 19.101 21.453 21.04 19.659 21.04H4.34101C2.54601 21.04 1.42101 19.101 2.31201 17.543L9.97101 4.139C10.868 2.568 13.132 2.568 14.029 4.139Z" stroke="#F32C50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <div class="alert-danger-inner error-exceeds-deadline">
-                    Exceeds max amount on a <strong><span class="hours-limit">N-hour</span> deadline - <span class="pages-limit">Х pages</span> or <span class="charts-limit">Y charts</span></strong> (1 page = 2 charts).
-                </div>
-            </div>
-            <div class="alert-danger-with-icon alert-danger-margin slides-charts-pages-limit-step1-error" style="display: none">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 8.62988C12.4142 8.62988 12.75 8.96567 12.75 9.37988V13.1199C12.75 13.5341 12.4142 13.8699 12 13.8699C11.5858 13.8699 11.25 13.5341 11.25 13.1199V9.37988C11.25 8.96567 11.5858 8.62988 12 8.62988ZM11 16.3776C10.9975 15.8214 11.4487 15.3749 11.999 15.3749C12.5503 15.3749 13 15.8207 13 16.3749C13 16.9271 12.5522 17.3749 12 17.3749C11.4487 17.3749 11.0015 16.9286 11 16.3776ZM11.5 16.3767L11 16.3803C11 16.3794 11 16.3785 11 16.3776C11 16.3767 11 16.3758 11 16.3749H11.5C11.5 16.3755 11.5 16.3761 11.5 16.3767ZM12.5 16.3694C12.5 16.3713 12.5 16.3731 12.5 16.3749L12.5 16.3694ZM12.5 16.3749L12.5 16.3694L12.5 16.3749Z" fill="#F32C50"/><path d="M14.029 4.139L21.688 17.543C22.578 19.101 21.453 21.04 19.659 21.04H4.34101C2.54601 21.04 1.42101 19.101 2.31201 17.543L9.97101 4.139C10.868 2.568 13.132 2.568 14.029 4.139Z" stroke="#F32C50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <div class="alert-danger-inner error-exceeds-deadline">
-                    Exceeds max amount on a <strong><span class="hours-limit">N-hour</span> deadline - <span class="pages-limit">Х pages</span> or <span class="charts-limit">Y slides and charts</span></strong> (1 page = 2 charts).
-                </div>
-            </div>
-
-            <div class="container-12" id="_type_of_institution" style="display: none;">
-                <div class="wrap-lable">Type of institution:</div>
-                <div class="wrap-select-arrow custom-select-form block-type-of-institution">
-                    <select name="type_of_institution" class="form-element valid-hide">
-                        <option value="">Choose...</option>
-                        <option value="1" >High
-                            school
-                        </option>
-                        <option value="2" >
-                            College
-                        </option>
-                        <option value="3" >
-                            Graduate school
-                        </option>
-                        <option value="4" >
-                            Business school
-                        </option>
-                        <option value="5" >Law
-                            school
-                        </option>
-                        <option value="6" >
-                            Medical school
-                        </option>
-                        <option value="7" >
-                            University
-                        </option>
-                        <option value="999" >
-                            Other
-                        </option>
-                    </select>
-                </div>
-                <div class="type_of_institution_error_place"></div>
-            </div>
-            <div class="container-12" id="_job_title_or_industry" style="display: none;">
-                <div class="wrap-lable">Job title or industry segment:</div>
-                <div class="wrap-select-arrow">
-                    <input class="form-element" type="text"
-                        name="job_title_or_industry" >
-                    <div class="job_title_or_industry_error_place"></div>
-                </div>
             </div>
         </div>
 
-        <div class="new_column-box no-gutters row form-block align-items-end">
-            <div class="quantity-col col-6 col-md-3 col-lg-4">
+        <div class="new_column-box no-gutters row form-block align-items-end is-justify-content-center">
+            <div class="col-12 col-md-3 col-lg-4">
                 <div class="wrap-lable pages_quantity">Quantity</div>
-                <div class="plus-minus-input d-flex">
-                    <div class="input-group-button">
-                        <button type="button" class="button hollow circle _pages_decr" data-quantity="minus"
-                                id="pages_input_minus_input" data-field="quantity">
-                            <img src="https://writemyessay.me/public/order_form_PH2020/img/input-minus.svg" alt=""/>
-                        </button>
-                    </div>
-                    <input id="input_words"
-                        maxlength="5"
-                        class="input-group-field _words " type="text" name="words"
-                        value="275"
+                <div class=" d-flex w-100">
+            
+                    <input 
+                        class="form-control"
+                        value=""
+                        type="number"
+                        name="pages"
+                        id="pages"
+                        required
                         >
-                    <input id="input_quantity" maxlength="3" class="input-group-field _pages " type="text"
-                        style="display:none" name="pages">
-                    <div class="input-group-button">
-                        <button type="button" class="button hollow circle _pages_incr" data-quantity="plus"
-                                data-field="quantity" id="pages_input_plus_input">
-                            <img src="https://writemyessay.me/public/order_form_PH2020/img/input-plus.svg" alt=""/>
-                        </button>
-                    </div>
-                </div>
-                <div class="wrap-lable quantity_error_place text-left alert-danger-margin pages-limit-error"></div>
-            </div>
-            <div class="switch-col col-6 col-md-5 col-lg-4">
-                <div class="switch-pages-holder" data-hide-block-calculations="">
-                    <div class="switch switch-pages-words"
-                        >
-                        <div  data-arr="pages">Pages</div>
-                        <div class="active" data-arr="words">
-                            Words
-                        </div>
-                        <input type="hidden" name="pages_words" value="2">
-                    </div>
-                </div>
-
-                <div class="col-problems-text" data-show-block-calculations="" style="display: none">
-                    <div class="col-problems-text-inner align-items-center justify-content-center d-flex">Problems</div>
-                </div>
-                <div class="topics-text" style="display: none">
-                    <div class="col-topics-text-inner align-items-center justify-content-center d-flex">
-                        Topics
-                    </div>
+                    
                 </div>
             </div>
-            <div class="space-col col-12 col-md-4 d-flex justify-content-start align-items-end flex-column">
-                            <div class="switch_pages__spaced_wrapper" >
-                    <div class="indicator_wrapper" >
-                        <div class="indicator_circle  active_double" data-arr="double_spaced" data-type="2">
+           
 
-                        </div>
-                    </div>
-                    <input type="hidden" name="spacing" value="2">
-                </div>
-                        </div>
         </div>
 
         <div class="row form-block">
             <div class="col-sm-6 datetimepicker_wrap datepricker-new-addon">
                 <div class="wrap-lable deadline_error_place deadline_picker_error_place">Deadline</div>
                 <div class="form-group">
-                    <div class="input-group date icon-close-datetimepicker">
-                        <input id="datetimepicker"  type="text" class="form-control" readonly/>
+                    <div class="input-group date icon-close-datetimepicker" >
+                        <input id="datepicker" name="deadline" required value="" type="text" class="form-control" readonly/>
                         <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar "></span>
+                            <span class="glyphicon glyphicon-calendar"  ></span>
                         </span>
                     </div>
                 </div>
             </div>
-            <input name="deadline" type="hidden"
-                value="10415">
-            <input name="deadline_date_utc" type="hidden" value=""/>
         </div>
         </div>
     </div>     
-                     
-    <div class="sticky-stopper"></div>
+
             </div>
             <div class="summary__wrapper--sidebar">
                 <div class="summary__wrapper-stickly">
@@ -550,11 +106,7 @@
 
                         <div class="summary_pane scroll-pane ">                        
                             <div class="summary__item summary__item--essayblock ">
-                                <div class="summary__item two_writers-summary" style="display:none;">
-                                    <div class="top_for_client--block"><span class="top_for_extras--name">2nd version of paper</span><span class="top_for_extras--price"></span></div>
-                                </div>
-                                   
-                                    <div class="top_for_client--block"><span class="top_for_client"></span><span class="top_for_client--price base-price-summary"></span></div>
+                    
                                                                                                                       
                                 <p class="top_for_client--block top_for_client-light">Quantity: <span class="quantity_for_client"></span></p>
                                 <div class="top_for_client--block  top_for_client-light ">
@@ -568,62 +120,7 @@
                                     <span class="top_client-name">Subject area:</span>
                                     <span class="subject_area-block text-right">Art & architecture</span>                               
                                 </div>
-                                <div class="top_for_client--block top_for_client-light">
-                                    <span class="top_client-name">Slides:</span>
-                                    <span class="slides_for_client"><span></span></span>
-                                </div>
                             </div>
-                            <div class="summary__item basic-writer-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Basic <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price"></span></div>
-                            </div>
-                            <div class="summary__item advanced_writer-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Advanced <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item top_writer-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">TOP <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>  
-                                                            <div class="summary__item standard-level_service-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name"> Standard service </span><span class="top_for_extras--price">Free</div>
-                            </div>       
-                            <div class="summary__item plagiarism_report-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Plagiarism</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item plagiarism_report_turnitin-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Turnitin Report</span><span class="top_for_extras--price">$29.99</span></div>
-                            </div>
-                            <div class="summary__item top_priority-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">VIP Customer Service</span><span class="top_for_extras--price">$14.99</span></div>
-                            </div>                     
-                            <div class="summary__item updates_via_sms-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Text Message</span><span class="top_for_extras--price">$3.99</span></div>
-                            </div>  
-                            <div class="summary__item table_of_contents-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Table of Contents</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item sources_summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Sources:</span><span class="top_for_extras-quantity">X sources</span></div>
-                            </div> 
-                            <div class="summary__item sources_used-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Sources used</span><span class="top_for_extras--price">$4.99</span></div>
-                            </div>
-                            <div class="summary__item basic_explanations-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Basic explanations</span><span class="top_for_extras--price">$4.99</span></div>
-                            </div>
-                            <div class="summary__item abstract_page-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Add an Abstract Page</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item editors_check-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Editor’s Check</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div> 
-                            <div class="summary__item simple_language-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Simple Language</span><span class="top_for_extras--price">Free</span></div>
-                            </div> 
-                            <div class="summary__item powerpoint_slides-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">PowerPoint slides</span><span class="top_for_extras--price">$7</span></div>
-                            </div> 
-                            <div class="summary__item charts_graph-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Charts &amp; Graphs</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>                                  
                         </div>
 
 
@@ -631,35 +128,14 @@
                             <div class="price-all-container">
                                 <div class="price-all-container-bl">
                                     <div class="total-price"><span>TOTAL</span><span class="price" data-ph-tst="of-prc">$14.00</span></div>
-
-                                    <div class="total-price-approx" style="display:none;">
-                                        <div class="d-flex justify-content-between">
-                                            <span>Approximately</span>
-                                            <div class="price-approx-inner">
-                                                <span class="price-approx">$14.00</span>
-                                                <span class="info-tooltip" data-tooltip="The payment will be processed in USD. If your card-issuing company or bank uses a different currency, the final transaction price may differ due to currency exchange rates."></span>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-
-                                    <div class="old-price" style="display:none"><span></span></div>
-                                            
-                                    <div class="save-price-description" style="display:none;color: #818181;font-size: 12px;">
-                                        You save $<span class="save-price-span">26.00</span>
-                                        <span class="bonus-price-span-holder">
-                                            now and get 
-                                            $<span class="bonus-price-span-description">0</span> 
-                                            for next order
-                                        </span>
-
-                                    </div>                                            
-                                </div>
+                                 </div>
                             </div>   
                         </div>                     
                     </div>
                     <div  id="tab-3">
                         <div class="back-responsive tabs d-flex justify-content-center justify-content-md-between justify-content-lg-end">
-                            <a style="text-decoration: none !important;" class="go-step-mobile btn-check btn-continue next-btn-step nav-step d-flex go-to-step-2" href="{% url 'core:order-detail' %}"><span>NEXT</span></a>
+                        
+                            <button type="submit" style="text-decoration: none !important;" class="go-step-mobile btn-check btn-continue next-btn-step nav-step d-flex go-to-step-2"><span>NEXT</span></button>
                         </div>
                     </div>
                 </div>
@@ -668,3 +144,57 @@
     </div>  
 </form>
 {% endblock order %}
+
+{% block extrajs %}
+
+
+<script>
+    $( function() {
+      $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
+    } );
+    </script>
+
+  <script>
+
+
+        const form = $("#order-form1")
+
+        function validate (){
+            return {
+                level: $("#level").val(),
+                paper: $("#type_of_paper").val(),
+                pages: $("#pages").val(),
+                deadline: $("#datepicker").val(),
+                token: document.getElementById("order-form1")[0].value
+            }
+        }
+
+        $(form).on("submit", function(e){
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: $(this).action,
+                data: {
+                    level: validate().level,
+                    paper: validate().paper,
+                    pages: validate().pages,
+                    deadline: validate().deadline,
+                    csrfmiddlewaretoken: validate().token
+                },
+                success: function(response){
+                    const data = response.data,
+                    path=response.path
+
+                    console.log(data, path)
+                    window.location.href = path
+                
+                },
+                error: function(error){
+                    console.log(error.responseText)
+                },
+            })
+        })
+
+
+      </script>
+{% endblock extrajs %}

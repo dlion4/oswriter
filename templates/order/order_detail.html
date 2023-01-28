@@ -1,104 +1,28 @@
 {% extends "order/base.html" %}
 
 {% block order %}
-<form  method="" class="" enctype="multipart/form-data" >
+<form  action="{{order.get_absolute_url}}" method="post" enctype="multipart/form-data" id="form-order2">
+    {% csrf_token %}
     <div class="row justify-content-center">
     <div class="order-setep__wrapper">    
-    
-
         <div class="row">
         <div class="col-lg-8">
             <div >
-                <input name="type_of_step" type="hidden" value="1">
-                <input type="file" data-column-name="files[]" name="files[]" id="files_input" multiple="multiple"/>
                 <div id="form--quick" class="content__inner" style="display:block" >
                     <div class="order-form-inner element-block">
-                        <div class="subject__block" data-hide-block-calculations="1">
+                        <div class="subject__block">
                             <div class="wrap-lable">Subject area</div><div class="wrap-optional">(optional)</div>
                         </div>
                         <div class="wrap-select-arrow block-subject" data-hide-block-calculations="1">
-                            <select data-column-name="subject" data-placeholder="Choose" name="subject" class="form-control select__custom select2-of">
+                            <select "subject" data-placeholder="Choose" id="subject" name="subject" class="form-control select__custom select2-of">
                                 <option></option>
-                                <option  value="1">Accounting</option>
-                                <option  value="1012">Advertising</option>
-                                <option  value="2">Anthropology</option>
-                                <option  value="4">Art &amp; architecture</option>
-                                <option  value="42">Astronomy</option>
-                                <option  value="65">Aviation</option>
-                                <option   value="34">Biology</option>
-                                <option  value="5">Business</option>
-                                <option   value="35">Chemistry</option>
-                                <option   value="6">Classic English literature</option>
-                                <option   value="7">Communication</option>
-                                <option   value="59">Computer Science</option>
-                                <option   value="68">Criminal Justice</option>
-                                <option   value="8">Criminal Law</option>
-                                <option  value="46">Culture and Ethnic Studies</option>
-                                <option  value="69">Design</option>
-                                <option   value="9">Economics</option>
-                                <option   value="49">Ecology</option>
-                                <option   value="10">Education</option>
-                                <option  value="38">Engineering</option>
-                                <option  value="39">English</option>
-                                <option   value="37">Environmental studies</option>
-                                <option   value="63">Ethics</option>
-                                <option   value="11">Family and consumer science</option>
-                                <option   value="12">Film studies</option>
-                                <option   value="14">Finance</option>
-                                <option   value="73">Financial Management</option>
-                                <option   value="51">Geology</option>
-                                <option   value="41">Geography</option>
-                                <option  value="75">Government</option>
-                                <option   value="58">Health Care</option>
-                                <option   value="15">History</option>
-                                <option   value="62">Homeland Security</option>
-                                <option    value="47">Human Resource Management</option>
-                                <option  value="79">Human Services</option>
-                                <option   value="71">Humanities</option>
-                                <option   value="48">Investments</option>
-                                <option   value="52">Journalism</option>
-                                <option   value="16">Law</option>
-                                <option   value="1015">Leadership</option>
-                                <option   value="55">Linguistics</option>
-                                <option   value="33">Literature</option>
-                                <option  value="64">Logic</option>
-                                <option   value="61">Logistics</option>
-                                <option   value="17">Management</option>
-                                <option   value="18">Marketing</option>
-                                <option   value="19">Mathematics</option>
-                                <option  value="78">Media</option>
-                                <option   value="20">Medicine</option>
-                                <option   value="1018">Military science</option>
-                                <option   value="21">Music</option>
-                                <option   value="22">Nursing</option>
-                                <option   value="56">Nutrition</option>
-                                <option   value="1021">Pharmacology</option>
-                                <option  value="23">Philosophy</option>
-                                <option  value="36">Physics</option>
-                                <option  value="53">Poetry</option>
-                                <option  value="26">Political science</option>
-                                <option  value="45">Programming</option>
-                                <option  value="70">Project Management</option>
-                                <option  value="25">Psychology</option>
-                                <option  value="77">Public Administration</option>
-                                <option  value="74">Public health</option>
-                                <option  value="24">Religious studies</option>
-                                <option  value="67">Risk Management</option>
-                                <option  value="72">Science</option>
-                                <option  value="27">Shakespeare studies</option>
-                                <option   value="1024">Social Work</option>
-                                <option   value="28">Sociology</option>
-                                <option   value="60">Sports</option>
-                                <option   value="40">Statistics</option>
-                                <option   value="66">Supply Chain Management</option>
-                                <option   value="29">Technology</option>
-                                <option   value="13">Theater studies</option>
-                                <option  value="76">Theology</option>
-                                <option   value="50">Tourism</option>
-                                <option   value="30">Women and gender studies</option>
-                                <option   value="31">World affairs</option>
-                                <option   value="32">World literature</option>
-                                <option   value="999">Other</option>
+                                <option  value="Accounting">Accounting</option>
+                                <option  value="Theology">Theology</option>
+                                <option   value="Tourism">Tourism</option>
+                                <option   value="Women and gender studies">Women and gender studies</option>
+                                <option   value="World affairs">World affairs</option>
+                                <option   value="World literature">World literature</option>
+                                <option   value="Other">Other</option>
                             </select>
                             <div class="wrap-lable subject_error_place"></div>
                         </div>
@@ -106,22 +30,18 @@
                         <div class="wrap-lable">Paper Instructions<span class="empty-margin"></span></div>
                         <div class="_files-drop-zone topic-paper-details-block">
                             <div class="topic-block" >
-                                    <input placeholder="Your Topic" class="form-element mb-2" value="" data-column-name="topic" type="text" name="topic">
+                                    <input placeholder="Your Topic" id="topic" class="form-element mb-2" value="" data-column-name="topic" type="text" name="topic" required>
                             </div>
                                 <div class="_files-drop-zone-con">
-                                <textarea name="paper_details" class="form-control mb-4"  placeholder="Describe your paper details in at least 3 words in English" ></textarea>
-                                <input type="file" name="files" id="files" class="form-control m-auto my-3">
+                                <textarea name="paper_details" class="form-control mb-4" id="instructions" name="instructions"  placeholder="Describe your paper details in at least 3 words in English" required></textarea>
+                                <input type="file" name="filesupload" class="form-control m-auto my-3">
                     
                             </div>
                         </div>
                         <div class="wrap-lable topic_error_place"></div>
                         <div class="wrap-lable paper_details_error_place"></div>
                         <div class="help-text">Upload your files here, if any. The file size limit is 100 Mb per file - otherwise, please contact support team for help.</div>
-                        <div class="container-row">
-                            <div class="container-12">
-                                <div role="presentation" class="files-upload__wrapper" style="display:none;"></div>
-                            </div>
-                        </div>
+                
 
                         <div class="paper-format--block " >
                         <div class="container-row">
@@ -129,31 +49,27 @@
                                 <div class="wrap-lable" data-wmem-tst="of-ppr_frm">Paper Format</div>
                                 <div class="paper-format__table" id="paper-format">
                                     <div class="btn-group btn-group-level btn-group-toggle d-flex justify-content-around" data-toggle="buttons">
-                                        <label data-wmem-tst="of-mla" class="btn btn-secondary btn-custom " >
-                                            <input type="radio" data-column-name="paper_format"  name="paper_format" value="1" id="option11" autocomplete="off" > MLA
+                                        <label data-wmem-tst="of-mla" class="btn btn-secondary btn-custom" >
+                                            <input type="radio"  name="MLA" id="MLA" autocomplete="off" > MLA
                                         </label>
                                         <label data-wmem-tst="of-apa" class="btn btn-secondary btn-custom ">
-                                            <input type="radio" data-column-name="paper_format" name="paper_format" value="2" id="option12" autocomplete="off" > APA
+                                            <input type="radio" name="APA" id="APA" autocomplete="off" > APA
                                         </label>
                                         <label data-wmem-tst="of-chi_tur" class="btn btn-secondary btn-custom ">
-                                            <input type="radio" data-column-name="paper_format" name="paper_format" value="3" id="option13" autocomplete="off"  > Chicago/Turabian
+                                            <input type="radio" name="CHICAGO"  id="Chicago-Turabian" autocomplete="off"  > Chicago/Turabian
                                         </label>
                                         <label data-wmem-tst="of-hrvd" class="btn btn-secondary btn-custom ">
-                                            <input type="radio" data-column-name="paper_format" name="paper_format" value="4" id="option14" autocomplete="off" > Harvard
-                                        </label>
-                                        <label data-wmem-tst="of-other" class="btn btn-secondary btn-custom active">
-                                            <input type="radio" data-column-name="paper_format" name="paper_format" value="999" id="option15" autocomplete="off" checked="checked"> Other
+                                            <input type="radio" data-column-name="paper_format" name="HARVARD" id="HARVARD" autocomplete="off" > Harvard
                                         </label>
                                     </div>
                                 </div>
                                 <div class="paper_format__wrapper--select">
                                     <div class="wrap-select-arrow custom-select-form block-type-of-paper">
-                                        <select id="paper_format--select" data-column-name="paper_format_mobile" name="paper_format_mobile" class="dynamic-hints paper_type_select_class form-element">
-                                            <option data-wmem-tst="of-mla"  value="1">MLA</option>
-                                            <option data-wmem-tst="of-apa" selected value="2">APA</option>
-                                            <option data-wmem-tst="of-chi_tur"  value="3">Chicago/Turabian</option>
-                                            <option data-wmem-tst="of-hrvd"  value="4">Harvard</option>
-                                            <option data-wmem-tst="of-other"  value="999">Other</option>
+                                        <select id="paper_format" name="paper_format" required class="dynamic-hints paper_type_select_class form-element">
+                                            <option value="MLA">MLA</option>
+                                            <option value="APA">APA</option>
+                                            <option value="CHICAGO/TURABIAN">Chicago/Turabian</option>
+                                            <option value="HARVARD">Harvard</option>
                                         </select>
                                     </div>
                                 </div>
@@ -168,21 +84,21 @@
                                 <div class="sources_used--block-inner">
                                     <div class="wrap-lable">Sources</div>
                                 </div>
-                               <input type="number" name="source" id="" class="form-control col-12">
+                               <input type="number" name="source" id="source" class="form-control col-12">
                             </div>
 
                             <div class="sources-col col-12 col-sm-4 _slides-block-step-2" id="block_slides" >
                                 <div class="sources_used--block-inner">
                                     <div class="wrap-lable">PowerPoint slides</div>
                                 </div>
-                                <input type="number" name="ppt" id="" class="form-control col-12">
+                                <input type="number" name="ppt" id="ppt" class="form-control col-12">
                             </div>
 
                             <div class="sources-col sources-col-last col-12 col-sm-4">
                                 <div class="sources_used--block-inner">
                                     <div class="wrap-lable">Charts & Graphs</div>
                                 </div>
-                                <input type="number" name="cg" id="" class="form-control col-12">
+                                <input type="number" name="cg" id="cg" class="form-control col-12">
                             </div>
        
                         </div>
@@ -193,7 +109,7 @@
                                 <span class="wrapper__title wrapper__title--star">A-star extras <span>make your experience perfect</span></span>
                                     <div class="checkbox-v _plagiarism_report checkbox-extras-1  ms-4" data-toggle="tooltip" title="">
                                         <label for="plag-report" class="row">
-                                            <input type="checkbox"   id="plag-report" name="" value="1"  class="col-1">
+                                            <input type="checkbox"   id="plag-report" name="plag-report" class="col-1">
                                             <div class="col-9">
                                             <span class="check-t check-text">
                                                 <div class="extras__wrapper">
@@ -206,24 +122,9 @@
                                             </div>
                                         </label>
                                     </div>
-                                <div class="checkbox-v _text_message checkbox-extras-3  " data-toggle="tooltip" title="">
-                                    <label for="text_message" class="row">
-                                        <input type="checkbox" class="col-1" name="" value="1"  id="text_message">
-                                        <div class="col-9">
-                                        <span class="check-t check-text">
-                                            <div class="extras__wrapper">
-                                                <div class="extras__wrapper--top">
-                                                    <div class="extras__title">Text Message</div><div class="extras__price">$3.99</div>                                        
-                                                </div>                                        
-                                                <div class="extras__description">Get text messages about the order updates</div>
-                                            </div>
-                                        </span>
-                                        </div>
-                                    </label>
-                                </div>
                                 <div class="d-none d-md-block checkbox-v _table_contents checkbox-extras-3 " data-toggle="tooltip" title="">
                                     <label for="table_contents" class="row">
-                                        <input type="checkbox" class="col-1"  name="" value="1"  id="table_contents">
+                                        <input type="checkbox" class="col-1" name="table_contents" id="table_contents">
                                         <div class="col-10">
                                             <span class="check-t check-text">
                                                 <div class="extras__wrapper">
@@ -238,7 +139,7 @@
                                 </div>
                                 <div class="d-none d-md-block checkbox-v _abstract_page checkbox-extras-2 " data-toggle="tooltip" title="">
                                     <label for="abstract_page" class="row">
-                                        <input type="checkbox" class="col-1" value="1"  id="abstract_page">
+                                        <input type="checkbox" class="col-1" name="abstract_page"  id="abstract_page">
                                        <div class="col-10">
                                         <span class="check-t check-text">
                                             <div class="extras__wrapper">
@@ -253,7 +154,7 @@
                                 </div>
                                 <div class="d-none d-md-block checkbox-v _editors_check checkbox-extras-2 " data-toggle="tooltip" title="">
                                         <label for="editors_check" class="row">
-                                            <input type="checkbox" class="col-1" name="editors_check" value="1"  id="editors_check">
+                                            <input type="checkbox" class="col-1" name="editors_check"  id="editors_check">
                                             <div class="col-10">
                                                 <span class="check-t check-text">
                                                     <div class="extras__wrapper">
@@ -266,166 +167,72 @@
                                             </div>
                                         </label>
                                     </div>
-        
                             </div>
                         </div>
                     </div>
                 </div>
                     
             </div>
-            <div class="go-back nav-step go_back_link d-none d-lg-block back-button go-to-step-1" data-ph-tst="of-go_back">Go back</div>
+            <div class="go-back nav-step go_back_link d-none d-lg-block back-button go-to-step-1" data-ph-tst="of-go_back">Go back
+            </div>
         </div>
-        <div class="col-lg-4">
-            <div class="summary__wrapper--sidebar">
-                <div class="summary__wrapper-stickly">
-                    <div class="summary__wrapper">
-                        <div class="summary__item summary__item--essaytitle">
-                            <div class="summary__title">Summary</div>
-                        </div>
-
-                        <div class="summary_pane scroll-pane ">                        
-                            <div class="summary__item summary__item--essayblock ">
-                                <div class="summary__item two_writers-summary" style="display:none;">
-                                    <div class="top_for_client--block"><span class="top_for_extras--name">2nd version of paper</span><span class="top_for_extras--price"></span></div>
-                                </div>
-                                
-                                    <div class="top_for_client--block"><span class="top_for_client"></span><span class="top_for_client--price base-price-summary"></span></div>
-                                                                                                                    
-                                <p class="top_for_client--block top_for_client-light">Quantity: <span class="quantity_for_client"></span></p>
-                                <div class="top_for_client--block  top_for_client-light ">
-                                    <span class="top_client-name">Deadline:</span> <span class="deadline_for_client">24 Aug 2019, 2:00 PM</span>                             
-                                </div> 
-                                <div class="top_for_client--block top_for_client-light">
-                                    <span class="top_client-name">Academic Level:</span>
-                                    <span class="aclevel_for_client"><span></span></span>                               
-                                </div> 
-                                <div class="top_for_client--block top_for_client-light" style="display:none;">
-                                    <span class="top_client-name">Subject area:</span>
-                                    <span class="subject_area-block text-right">Art & architecture</span>                               
-                                </div>
-                                <div class="top_for_client--block top_for_client-light">
-                                    <span class="top_client-name">Slides:</span>
-                                    <span class="slides_for_client"><span></span></span>
-                                </div>
-                            </div>
-                            <div class="summary__item basic-writer-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Basic <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price"></span></div>
-                            </div>
-                            <div class="summary__item advanced_writer-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Advanced <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item top_writer-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">TOP <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>  
-                                                            <div class="summary__item standard-level_service-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name"> Standard service </span><span class="top_for_extras--price">Free</div>
-                            </div>       
-                            <div class="summary__item plagiarism_report-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Plagiarism</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item plagiarism_report_turnitin-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Turnitin Report</span><span class="top_for_extras--price">$29.99</span></div>
-                            </div>
-                            <div class="summary__item top_priority-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">VIP Customer Service</span><span class="top_for_extras--price">$14.99</span></div>
-                            </div>                     
-                            <div class="summary__item updates_via_sms-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Text Message</span><span class="top_for_extras--price">$3.99</span></div>
-                            </div>  
-                            <div class="summary__item table_of_contents-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Table of Contents</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item sources_summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Sources:</span><span class="top_for_extras-quantity">X sources</span></div>
-                            </div> 
-                            <div class="summary__item sources_used-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Sources used</span><span class="top_for_extras--price">$4.99</span></div>
-                            </div>
-                            <div class="summary__item basic_explanations-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Basic explanations</span><span class="top_for_extras--price">$4.99</span></div>
-                            </div>
-                            <div class="summary__item abstract_page-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Add an Abstract Page</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>
-                            <div class="summary__item editors_check-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Editor’s Check</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div> 
-                            <div class="summary__item simple_language-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Simple Language</span><span class="top_for_extras--price">Free</span></div>
-                            </div> 
-                            <div class="summary__item powerpoint_slides-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">PowerPoint slides</span><span class="top_for_extras--price">$7</span></div>
-                            </div> 
-                            <div class="summary__item charts_graph-summary" style="display:none;">
-                                <div class="top_for_client--block"><span class="top_for_extras--name">Charts &amp; Graphs</span><span class="top_for_extras--price">$9.99</span></div>
-                            </div>                                  
-                        </div>
-
-
-                        <div class="price-all-con">                            
-                            <div class="price-all-container">
-                                <div class="price-all-container-bl">
-                                    <div class="total-price"><span>TOTAL</span><span class="price" data-ph-tst="of-prc">$14.00</span></div>
-
-                                    <div class="total-price-approx" style="display:none;">
-                                        <div class="d-flex justify-content-between">
-                                            <span>Approximately</span>
-                                            <div class="price-approx-inner">
-                                                <span class="price-approx">$14.00</span>
-                                                <span class="info-tooltip" data-tooltip="The payment will be processed in USD. If your card-issuing company or bank uses a different currency, the final transaction price may differ due to currency exchange rates."></span>
-                                            </div>
-                                        </div>
-                                    </div>                                    
-
-                                    <div class="old-price" style="display:none"><span></span></div>
-                                            
-                                    <div class="save-price-description" style="display:none;color: #818181;font-size: 12px;">
-                                        You save $<span class="save-price-span">26.00</span>
-                                        <span class="bonus-price-span-holder">
-                                            now and get 
-                                            $<span class="bonus-price-span-description">0</span> 
-                                            for next order
-                                        </span>
-
-                                    </div>                                            
-                                </div>
-                            </div>   
-                        </div>
-                        <div class="discount__container">
-                            <div class="link-discount__block">
-                                <div class="d-flex">
-                                    <div   class="link-discount-price"><span class="text-decoration">Enter a promo code</span> <span class="discount-optional">(optional)</span></div>
-                                    <div  style="display:none;" class="link-discount-price-approved"><span class="text-decoration"><span class="glyphicon glyphicon-ok" ></span>Promo code applied</span></div>
-                                </div>
-                            </div>                        
-                            <!-- Start Discount Code-->
-                            <div class="order-discount__container" >                                                                                            
-                                <div class="area-discount-code__wrapper">
-                                    <div class="btn-hide-discount"></div>                                        
-                                    <div class="area-discount-code"> 
-                                        <input placeholder="Enter Promo Code " type="text" name="discount_code" value='' maxlength="75" class="discount-el">
-                                    </div>
-                                    <div class="btn-reset-discount">Reset</div>                                
-                                    <div class="wrap-lable discount_code_error_place text-center" style=""></div>                                                    
-                                </div>
-                            </div>                         
-                            <!-- End Discount Code--> 
-                        </div>                        
-                    </div>
-                    <div  id="tab-3">
-                        <div class="back-responsive tabs d-flex justify-content-center justify-content-md-between justify-content-lg-end">
-                            <div class="go-back nav-step go_back_link d-none-back-button d-lg-none back-button"><span>GO </span>Back</div>
-                            <button id="btn-check" type="button" class="go-step-mobile btn-check btn-continue next-btn-step nav-step d-flex go-to-step-2" data-ph-tst="of-checkt-btn"><span>NEXT</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </div>
+        {% include "order/sections/summary-detail.html" %}
         </div>
     </div>                               
     </div>
-                                                                                        
-    </div>
-    </div>     
 </form>
 {% endblock order %}
+
+
+
+{% block extrajs %}
+<script>
+
+const form = $("#form-order2")
+
+
+
+function validate(){
+    return {
+        subject: $("#subject").val(),
+        topic: $("#topic").val(),
+        instructions: $("#instructions").val(),
+        // files:$("#files")[0].files,
+        csrfmiddlewaretoken: document.getElementById("form-order2")[0].value,
+        paper_format: $("#paper_format").val(),
+        sources: $("#source").val(),
+        ppt: $("#ppt").val(),
+        cg: $("#cg").val(),
+        plag_report:  $("#plag-report").val(),
+        table_contents: $("#table_contents").val(),
+        abstract_page: $("#abstract_page").val(),
+        editors_check: $("#editors_check").val(),
+    }
+}
+
+
+
+        //files:$("#files").files[0],
+        //paperformat: $("#paper_format--select").val(),
+
+$(form).on("submit", function(e){
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: $(this).action,
+        data: {
+            ...validate()
+        },
+        success: function(res){
+            console.log(res)
+            window.location.href = res.path
+        },
+        error: function(e){
+            console.log(e)
+        }
+
+    })
+})
+
+</script>
+{% endblock extrajs %}
