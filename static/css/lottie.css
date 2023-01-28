@@ -54,7 +54,7 @@
                 transition: all .3s ease;
                 -webkit-animation: floatbtnanim 5s infinite;
                 animation: floatbtnanim 5s infinite;
-                background: #FE9000;
+                background: #87cefa;
                 background-repeat: no-repeat;
             }
             #contacts-btn {

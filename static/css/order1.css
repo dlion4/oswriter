@@ -8574,7 +8574,7 @@ input::placeholder,
     }
 
     .datepricker-new-addon .datetimepicker-confirm{
-        background: #FE9000!important;
+        background: #87cefa!important;
         max-width: 266px;
         margin: 0 auto 20px auto;
         border-radius: 4px;
@@ -8583,7 +8583,7 @@ input::placeholder,
     }
 
     body .datepricker-new-addon .datetimepicker-confirm:hover{
-        background: #FE5B00!important;
+        background: #7e7f80!important;
     }
 
     .bootstrap-datetimepicker-widget .table-condensed .btn-primary{
@@ -8658,7 +8658,7 @@ input::placeholder,
     }
 
     .order-auth-social .btn-admin__registered{
-        background: #FE9000!important;
+        background: #87cefa!important;
         border-radius: 10px;
         height: 48px;
         line-height: 48px;
@@ -8670,11 +8670,11 @@ input::placeholder,
     }
 
     .order-auth-social .btn-admin__registered:focus{
-        background: #FE9000!important;
+        background: #87cefa!important;
     }
 
     .order-auth-social .btn-admin__registered:hover{
-        background: #FE5B00!important;
+        background: #7e7f80!important;
     }
 
     .order-auth-social .btn-admin__registered span{
@@ -8780,7 +8780,7 @@ input::placeholder,
         text-align: left !important;
     }
     .btn-check.btn-continue, .btn-check.btn-continue.next-btn-step, .btn-check.btn-continue.next-btn-step:focus {
-        background: #FE9000!important;
+        background: #87cefa!important;
     }
 
     .btn-check.btn-continue.next-btn-step:hover, .btn-check.btn-continue.next-btn-step:active {
@@ -8798,7 +8798,7 @@ input::placeholder,
     .btn-check.btn-continue.next-btn-step:hover{
         height: 48px;
         line-height: 48px;
-        background: #FE5B00!important;
+        background: #7e7f80!important;
     }
 
     .top_for_client--block{
@@ -8901,16 +8901,16 @@ input::placeholder,
         background: transparent!important;
         max-width: 266px;
         margin: 20px auto 20px auto!important;
-        color: #FE9000!important;
+        color: #87cefa!important;
         font-weight: bold;
         font-size: 12px;
-        border: 1px solid #FE9000!important;
+        border: 1px solid #87cefa!important;
         box-sizing: border-box;
         border-radius: 4px;
     }
 
     .datepricker-new-addon .bootstrap-datetimepicker-widget .picker-switch td i:hover{
-        border: 2px solid #FE9000!important;
+        border: 2px solid #87cefa!important;
         cursor: pointer;
     }
 
@@ -8924,7 +8924,7 @@ input::placeholder,
 
 
     .service_level-wrap .extras__price{
-        background: #2C2CEA !important;
+        background: #9acd32 !important;
         border-radius: 6px;
         font-weight: 900;
         font-size: 12px;
@@ -8942,8 +8942,8 @@ input::placeholder,
         background: #F5F9FC !important;
     }
     .writers-category__item.active-category {
-        background: #2C2CEA!important;
-        border: 2px solid #2C2CEA!important;
+        background: #9acd32!important;
+        border: 2px solid #9acd32!important;
     }
 
     #order-form .checkbox-v.check-active {
@@ -9016,8 +9016,8 @@ input::placeholder,
     }
     .go_back_link {
         color: #fff !important;
-        border: 1px solid #FE9000 !important;
-        background: #FE9000!important;
+        border: 1px solid #87cefa !important;
+        background: #87cefa!important;
         border-radius: 10px;
         height: 45px;
         line-height: 45px;
@@ -9029,9 +9029,9 @@ input::placeholder,
     }
 
     .go_back_link:hover {
-        background: #FE5B00  !important;
+        background: #7e7f80  !important;
         color: #fff !important;
-        border-color: #FE5B00 !important;
+        border-color: #7e7f80 !important;
     }
 
     .go_back_link:hover::before{
@@ -9085,10 +9085,10 @@ input::placeholder,
         margin: 0;
     }
     .drop-files--extended__container .btn-file {
-        background: #FE9000 !important;
+        background: #87cefa !important;
     }
     .drop-files--extended__container .btn-file:hover {
-        background: #FE5B00 !important;
+        background: #7e7f80 !important;
     }
 
     button.done-file {
@@ -9165,7 +9165,7 @@ input::placeholder,
     .select2-results__option--highlighted[aria-selected],
     .select2-results__option--highlighted{
         background: transparent!important;
-        color: #FE9000!important;
+        color: #87cefa!important;
     }
 
     .select2-container--default .select2-results__option[aria-selected=true]{
@@ -10088,6 +10088,6 @@ html {
     }
 }
 .alert-gmail svg circle{
-    fill: #FE9000;
+    fill: #87cefa;
 }
 /*END Alert Gmail*/
