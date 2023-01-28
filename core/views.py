@@ -14,6 +14,7 @@ class PricingView(TemplateView):
 
 
 class OrderItemView(TemplateView):
-    template_name = "order/base.html"
+    template_name = "order/order.html"
 
-    
+class OrderDetailAddView(TemplateView):
+    template_name = "order/order_detail.html"

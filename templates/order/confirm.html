@@ -1,0 +1,206 @@
+{% extends "order/base.html" %}
+
+{% block order %}
+<form  method="" id="_order_form" class="" enctype="multipart/form-data" >
+    <div class="row justify-content-center">
+    <div class="order-setep__wrapper">    
+    <div id="order-form" class="order-form-pay">  
+    
+                                      
+               
+    <div class="sticky-stopper"></div>
+            </div>
+            <div class="summary__wrapper--sidebar">
+                <div class="summary__wrapper-stickly">
+                    <div class="summary__wrapper">
+                        <div class="summary__item summary__item--essaytitle">
+                            <div class="summary__title">Summary</div>
+                        </div>
+
+                        <div class="summary_pane scroll-pane ">                        
+                            <div class="summary__item summary__item--essayblock ">
+                                <div class="summary__item two_writers-summary" style="display:none;">
+                                    <div class="top_for_client--block"><span class="top_for_extras--name">2nd version of paper</span><span class="top_for_extras--price"></span></div>
+                                </div>
+                                   
+                                    <div class="top_for_client--block"><span class="top_for_client"></span><span class="top_for_client--price base-price-summary"></span></div>
+                                                                                                                      
+                                <p class="top_for_client--block top_for_client-light">Quantity: <span class="quantity_for_client"></span></p>
+                                <div class="top_for_client--block  top_for_client-light ">
+                                    <span class="top_client-name">Deadline:</span> <span class="deadline_for_client">24 Aug 2019, 2:00 PM</span>                             
+                                </div> 
+                                <div class="top_for_client--block top_for_client-light">
+                                    <span class="top_client-name">Academic Level:</span>
+                                    <span class="aclevel_for_client"><span></span></span>                               
+                                </div> 
+                                <div class="top_for_client--block top_for_client-light" style="display:none;">
+                                    <span class="top_client-name">Subject area:</span>
+                                    <span class="subject_area-block text-right">Art & architecture</span>                               
+                                </div>
+                                <div class="top_for_client--block top_for_client-light">
+                                    <span class="top_client-name">Slides:</span>
+                                    <span class="slides_for_client"><span></span></span>
+                                </div>
+                            </div>
+                            <div class="summary__item basic-writer-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Basic <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price"></span></div>
+                            </div>
+                            <div class="summary__item advanced_writer-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Advanced <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price">$9.99</span></div>
+                            </div>
+                            <div class="summary__item top_writer-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">TOP <span data-text-calculations="expert" data-text-not-calculations="writer">writer</span></span><span class="top_for_extras--price">$9.99</span></div>
+                            </div>  
+                                                            <div class="summary__item standard-level_service-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name"> Standard service </span><span class="top_for_extras--price">Free</div>
+                            </div>       
+                            <div class="summary__item plagiarism_report-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Plagiarism</span><span class="top_for_extras--price">$9.99</span></div>
+                            </div>
+                            <div class="summary__item plagiarism_report_turnitin-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Turnitin Report</span><span class="top_for_extras--price">$29.99</span></div>
+                            </div>
+                            <div class="summary__item top_priority-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">VIP Customer Service</span><span class="top_for_extras--price">$14.99</span></div>
+                            </div>                     
+                            <div class="summary__item updates_via_sms-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Text Message</span><span class="top_for_extras--price">$3.99</span></div>
+                            </div>  
+                            <div class="summary__item table_of_contents-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Table of Contents</span><span class="top_for_extras--price">$9.99</span></div>
+                            </div>
+                            <div class="summary__item sources_summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Sources:</span><span class="top_for_extras-quantity">X sources</span></div>
+                            </div> 
+                            <div class="summary__item sources_used-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Sources used</span><span class="top_for_extras--price">$4.99</span></div>
+                            </div>
+                            <div class="summary__item basic_explanations-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Basic explanations</span><span class="top_for_extras--price">$4.99</span></div>
+                            </div>
+                            <div class="summary__item abstract_page-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Add an Abstract Page</span><span class="top_for_extras--price">$9.99</span></div>
+                            </div>
+                            <div class="summary__item editors_check-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Editor’s Check</span><span class="top_for_extras--price">$9.99</span></div>
+                            </div> 
+                            <div class="summary__item simple_language-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Simple Language</span><span class="top_for_extras--price">Free</span></div>
+                            </div> 
+                            <div class="summary__item powerpoint_slides-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">PowerPoint slides</span><span class="top_for_extras--price">$7</span></div>
+                            </div> 
+                            <div class="summary__item charts_graph-summary" style="display:none;">
+                                <div class="top_for_client--block"><span class="top_for_extras--name">Charts &amp; Graphs</span><span class="top_for_extras--price">$9.99</span></div>
+                            </div>                                  
+                        </div>
+
+
+                        <div class="price-all-con">                            
+                            <div class="price-all-container">
+                                <div class="price-all-container-bl">
+                                    <div class="total-price"><span>TOTAL</span><span class="price" data-ph-tst="of-prc">$14.00</span></div>
+
+                                    <div class="total-price-approx" style="display:none;">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Approximately</span>
+                                            <div class="price-approx-inner">
+                                                <span class="price-approx">$14.00</span>
+                                                <span class="info-tooltip" data-tooltip="The payment will be processed in USD. If your card-issuing company or bank uses a different currency, the final transaction price may differ due to currency exchange rates."></span>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+
+                                    <div class="old-price" style="display:none"><span></span></div>
+                                            
+                                    <div class="save-price-description" style="display:none;color: #818181;font-size: 12px;">
+                                        You save $<span class="save-price-span">26.00</span>
+                                        <span class="bonus-price-span-holder">
+                                            now and get 
+                                            $<span class="bonus-price-span-description">0</span> 
+                                            for next order
+                                        </span>
+
+                                    </div>                                            
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="discount__container">
+                            <div class="link-discount__block">
+                                <div class="d-flex">
+                                    <div   class="link-discount-price"><span class="text-decoration">Enter a promo code</span> <span class="discount-optional">(optional)</span></div>
+                                    <div  style="display:none;" class="link-discount-price-approved"><span class="text-decoration"><span class="glyphicon glyphicon-ok" ></span>Promo code applied</span></div>
+                                </div>
+                            </div>                        
+                            <!-- Start Discount Code-->
+                            <div class="order-discount__container" >                                                                                            
+                                <div class="area-discount-code__wrapper">
+                                    <div class="btn-hide-discount"></div>                                        
+                                    <div class="area-discount-code"> 
+                                        <input placeholder="Enter Promo Code " type="text" name="discount_code" value='' maxlength="75" class="discount-el">
+                                    </div>
+                                    <div class="btn-reset-discount">Reset</div>                                
+                                    <div class="wrap-lable discount_code_error_place text-center" style=""></div>                                                    
+                                </div>
+                            </div>                         
+                            <!-- End Discount Code--> 
+                        </div>                        
+                    </div>
+                    <div  id="tab-3">
+                        <div class="back-responsive tabs d-flex justify-content-center justify-content-md-between justify-content-lg-end">
+                            <div class="go-back nav-step go_back_link d-none-back-button d-lg-none back-button"><span>GO </span>Back</div>
+                            <button id="btn-check" type="button" class="go-step-mobile btn-check btn-continue next-btn-step nav-step d-flex go-to-step-2" data-ph-tst="of-checkt-btn"><span>NEXT</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row order-summary order-summary-hide justify-content-center content-payment-mobile">  
+                                  
+                <div class="order-summary-cell col-12 col-md-9">
+                    <div class="order-option">                                                             
+                          
+                        
+                          
+                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
+                                                                                                                                                                 
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="order-auth-social__payment disabled__payment">
+                                            <div class="payment-caption">Choose Payment Method</div>
+                                            <input id="btn-proceed" type="hidden" />
+                                            <div class="pay-wrapper-new ">
+                                                <button data-ph-tst="pay_by_crd-btn" type="button" class="btn-check nav-paycard">
+                                                    <div class="wrap-payment d-flex">
+                                                        <div class="wrap-payment-img ofph2020t">
+                                                            <img src="https://writemyessay.me/public/order_form_PH2020/img/credit-card-payment-icon.svg" alt="">
+                                                        </div>
+                                                        <div class="button-title">
+                                                            Credit Card<br>
+                                                            <small>Insert your card details</small>
+                                                            <div class="bank_icon_wrapper">
+                                                                <img src="https://writemyessay.me/public/order_form_PH2020/img/visa.svg">
+                                                                <img src="https://writemyessay.me/public/order_form_PH2020/img/master.svg">
+                                                                <img src="https://writemyessay.me/public/order_form_PH2020/img/discover.svg">
+                                                                <img src="https://writemyessay.me/public/order_form_PH2020/img/jcb.svg">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                <input id="pay_system_type_credit" name="pay_system" value="1" type="radio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                    </div>
+                    <div class="go-back nav-step go_back_link d-none-back-button d-block d-lg-none back-button" >Back</div>
+                </div>                               
+                                
+            </div>                                                                               
+        </div>
+    </div>     
+</form>
+{% endblock order %}
