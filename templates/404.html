@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+<!--  -->
+{% load static %}
+{% block title %}
+  
+{% endblock title %}
+
+{% block extrahead %}
+{% endblock extrahead %}
+    {% block content %}
+    <section class="err__page">
+        <div class="container">
+            <div class="err__wrap">
+                <div class="err__left">
+                    <h1 class="title">Something's gone wrong</h1>
+                    <p>Sorry, but the page you are looking for can’t be found.</p>
+                    <a href="{% url 'core:home' %}" class="btn">Go to Home</a>
+                </div>
+                <div class="err__right"><img src="https://writemyessay.me/wp-content/themes/writemyessays/img/err-pic.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
