@@ -43,13 +43,13 @@ a.btn:hover{
     font-weight: bold;
     font-size: 13px;
     line-height: 16px;
-    color: #818181;
+    color: #101010;
     padding: 14px 12px;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link{
-    background: #000;
+    background: ##66cd32 !important;
     color: #ffffff;
     text-decoration: none;
 }
@@ -170,7 +170,7 @@ body .prices-deadline .currency-group .button.button-default{
 
 
 .price-item-cost:hover .name{
-    color: #FE9000;
+    color: #87cefa;
 }
 
 
@@ -296,7 +296,7 @@ body .prices-deadline .currency-group .button.button-default{
 }
 
 .price-item-col.active{
-    background: #FFFFFF;
+    background: #66cd32;
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
@@ -304,6 +304,7 @@ body .prices-deadline .currency-group .button.button-default{
 .price-item-col.active .price-item-cost{
     text-align: center;
     padding-top: 40px;
+    background: #66cd32;
 }
 
 .price-item-col.active .price-item-cost .name{
@@ -325,7 +326,7 @@ body .prices-deadline .currency-group .button.button-default{
     height: 32px;
     justify-content: center;
     align-items: center;
-    background: #FE9000;
+    background: #87cefa;
     border-radius: 4px;
     font-weight: bold;
     font-size: 12px;
@@ -337,7 +338,7 @@ body .prices-deadline .currency-group .button.button-default{
 .form-pricing-submit:hover{
     color: #ffffff;
     text-decoration: none;
-    background: #FE5B00;
+    background: #7e7f80;
 }
 
 .price-item-col.active .price-item-cost .form-pricing-submit{

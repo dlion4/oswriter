@@ -133,7 +133,7 @@ input {
 	line-height: 24px;
 	text-align: center;
 	color: #FFFFFF;
-	background: #FE9000;
+	background: #87cefa;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -144,7 +144,7 @@ input {
 }
 
 .btn:hover {
-	background: #FE5B00;
+	background: #7e7f80;
 	text-decoration: none;
 }
 
@@ -493,7 +493,7 @@ input {
 .main {
 	margin-top: -113px;
 	padding: 188px 0 140px;
-	background: #2C2CEA url('../img/lines.png') no-repeat center center / cover;
+	background: #9acd32 url('../img/lines.png') no-repeat center center / cover;
 }
 
 .main__wrap {
@@ -746,13 +746,13 @@ input {
 
 a.qual__rate-name:hover {
 	opacity: 1;
-	color: #FE9000;
+	color: #87cefa;
 }
 
 /* ---stud---- */
 
 .stud {
-	background: #2C2CEA url('../img/stud-wave.png') no-repeat 0 0 / cover;
+	background: #9acd32 url('../img/stud-wave.png') no-repeat 0 0 / cover;
 	position: relative;
 	padding: 140px 0;
 }
@@ -765,11 +765,11 @@ a.qual__rate-name:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#2C2CEA));
-	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#9acd32));
+	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
 	z-index: 1;
 }
 
@@ -834,11 +834,11 @@ a.qual__rate-name:hover {
 	display: inline-block;
 	width: 100%;
 	height: 100px;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#2C2CEA));
-	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#9acd32));
+	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
 }
 
 [data-readmore]+[data-readmore-toggle] {
@@ -1134,7 +1134,7 @@ a.qual__rate-name:hover {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 24px;
-	color: #FE9000;
+	color: #87cefa;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1212,7 +1212,7 @@ a.qual__rate-name:hover {
 /* ---team--- */
 
 .team {
-	background: #2C2CEA url('../img/can-wave.png') no-repeat 0 0 / cover;
+	background: #9acd32 url('../img/can-wave.png') no-repeat 0 0 / cover;
 	position: relative;
 	padding: 140px 0 204px;
 	color: #fff;
@@ -1226,11 +1226,11 @@ a.qual__rate-name:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#2C2CEA));
-	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
-	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #2C2CEA 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#9acd32));
+	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
 	z-index: 1;
 }
 
@@ -1345,7 +1345,7 @@ a.qual__rate-name:hover {
 }
 
 .count {
-	background: #2C2CEA;
+	background: #9acd32;
 	margin-top: -92px;
 	position: relative;
 	z-index: 3;
@@ -1399,7 +1399,7 @@ a.qual__rate-name:hover {
 
 .about {
 	padding: 51px 0 137px;
-	background: #2C2CEA;
+	background: #9acd32;
 }
 
 .about .title {
@@ -1697,13 +1697,13 @@ a.qual__rate-name:hover {
 }
 
 .slick-arrow:hover {
-	border: 2px solid #FE5B00 !important;
+	border: 2px solid #7e7f80 !important;
 	opacity: 1 !important;
 }
 
 .slick-arrow:hover::after {
-	border-bottom-color: #FE5B00;
-	border-left-color: #FE5B00;
+	border-bottom-color: #7e7f80;
+	border-left-color: #7e7f80;
 }
 
 .slick-prev {
@@ -1876,7 +1876,7 @@ a.qual__rate-name:hover {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 16px;
-	color: #FE9000;
+	color: #87cefa;
 }
 
 .slick-slide:focus {
@@ -2018,7 +2018,7 @@ a.qual__rate-name:hover {
 }
 
 .faq__title.open:before, .faq__title.open:after {
-	background: #2C2CEA;
+	background: #9acd32;
 }
 
 .faq__title.open::before {
@@ -2404,7 +2404,7 @@ a.qual__rate-name:hover {
 }
 
 .contacts__text a {
-	color: #FE9000;
+	color: #87cefa;
 	font-weight: 700;
 	line-height: 170%;
 }
@@ -2660,7 +2660,7 @@ a.qual__rate-name:hover {
 }
 
 .blog__card:hover .title-m {
-	color: #FE9000;
+	color: #87cefa;
 }
 
 .blog__meta {
@@ -2729,7 +2729,7 @@ a.qual__rate-name:hover {
 
 .err__page {
 	padding: 212px 0 140px;
-	background: #2C2CEA url('../img/lines.png') no-repeat center center / cover;
+	background: #9acd32 url('../img/lines.png') no-repeat center center / cover;
 	margin-top: -110px;
 }
 
@@ -3223,7 +3223,7 @@ a.qual__rate-name:hover {
 }
 
 .chat__btn {
-	background: #2C2CEA;
+	background: #9acd32;
 	color: #fff;
 	font-weight: 700;
 	font-size: 12px;
@@ -3345,7 +3345,7 @@ a.qual__rate-name:hover {
 	max-width: 100%;
 }
 .bl-info__left a {
-    color: #2C2CEA;
+    color: #9acd32;
 }
 
 .footer_phone{
