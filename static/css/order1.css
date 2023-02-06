@@ -8574,7 +8574,7 @@ input::placeholder,
     }
 
     .datepricker-new-addon .datetimepicker-confirm{
-        background: #87cefa!important;
+        background: #9acd32!important;
         max-width: 266px;
         margin: 0 auto 20px auto;
         border-radius: 4px;
@@ -8658,7 +8658,7 @@ input::placeholder,
     }
 
     .order-auth-social .btn-admin__registered{
-        background: #87cefa!important;
+        background: #9acd32!important;
         border-radius: 10px;
         height: 48px;
         line-height: 48px;
@@ -8670,7 +8670,7 @@ input::placeholder,
     }
 
     .order-auth-social .btn-admin__registered:focus{
-        background: #87cefa!important;
+        background: #9acd32!important;
     }
 
     .order-auth-social .btn-admin__registered:hover{
@@ -8780,7 +8780,7 @@ input::placeholder,
         text-align: left !important;
     }
     .btn-check.btn-continue, .btn-check.btn-continue.next-btn-step, .btn-check.btn-continue.next-btn-step:focus {
-        background: #87cefa!important;
+        background: #9acd32!important;
     }
 
     .btn-check.btn-continue.next-btn-step:hover, .btn-check.btn-continue.next-btn-step:active {
@@ -8901,16 +8901,16 @@ input::placeholder,
         background: transparent!important;
         max-width: 266px;
         margin: 20px auto 20px auto!important;
-        color: #87cefa!important;
+        color: #9acd32!important;
         font-weight: bold;
         font-size: 12px;
-        border: 1px solid #87cefa!important;
+        border: 1px solid #9acd32!important;
         box-sizing: border-box;
         border-radius: 4px;
     }
 
     .datepricker-new-addon .bootstrap-datetimepicker-widget .picker-switch td i:hover{
-        border: 2px solid #87cefa!important;
+        border: 2px solid #9acd32!important;
         cursor: pointer;
     }
 
@@ -9016,8 +9016,8 @@ input::placeholder,
     }
     .go_back_link {
         color: #fff !important;
-        border: 1px solid #87cefa !important;
-        background: #87cefa!important;
+        border: 1px solid #9acd32 !important;
+        background: #9acd32!important;
         border-radius: 10px;
         height: 45px;
         line-height: 45px;
@@ -9085,7 +9085,7 @@ input::placeholder,
         margin: 0;
     }
     .drop-files--extended__container .btn-file {
-        background: #87cefa !important;
+        background: #9acd32 !important;
     }
     .drop-files--extended__container .btn-file:hover {
         background: #7e7f80 !important;
@@ -9165,7 +9165,7 @@ input::placeholder,
     .select2-results__option--highlighted[aria-selected],
     .select2-results__option--highlighted{
         background: transparent!important;
-        color: #87cefa!important;
+        color: #9acd32!important;
     }
 
     .select2-container--default .select2-results__option[aria-selected=true]{
@@ -10088,6 +10088,6 @@ html {
     }
 }
 .alert-gmail svg circle{
-    fill: #87cefa;
+    fill: #9acd32;
 }
 /*END Alert Gmail*/

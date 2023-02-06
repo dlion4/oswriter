@@ -170,7 +170,7 @@ body .prices-deadline .currency-group .button.button-default{
 
 
 .price-item-cost:hover .name{
-    color: #87cefa;
+    color: #9acd32;
 }
 
 
@@ -326,7 +326,7 @@ body .prices-deadline .currency-group .button.button-default{
     height: 32px;
     justify-content: center;
     align-items: center;
-    background: #87cefa;
+    background: #9acd32;
     border-radius: 4px;
     font-weight: bold;
     font-size: 12px;

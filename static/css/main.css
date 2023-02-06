@@ -133,7 +133,7 @@ input {
 	line-height: 24px;
 	text-align: center;
 	color: #FFFFFF;
-	background: #87cefa;
+	background: #9acd32;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -493,7 +493,7 @@ input {
 .main {
 	margin-top: -113px;
 	padding: 188px 0 140px;
-	background: #9acd32 url('../img/lines.png') no-repeat center center / cover;
+	background: #2b6777 url('../img/lines.png') no-repeat center center / cover;
 }
 
 .main__wrap {
@@ -746,13 +746,13 @@ input {
 
 a.qual__rate-name:hover {
 	opacity: 1;
-	color: #87cefa;
+	color: #9acd32;
 }
 
 /* ---stud---- */
 
 .stud {
-	background: #9acd32 url('../img/stud-wave.png') no-repeat 0 0 / cover;
+	background: #2b6777 url('../img/stud-wave.png') no-repeat 0 0 / cover;
 	position: relative;
 	padding: 140px 0;
 }
@@ -765,11 +765,11 @@ a.qual__rate-name:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#9acd32));
-	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#2b6777));
+	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
 	z-index: 1;
 }
 
@@ -834,11 +834,11 @@ a.qual__rate-name:hover {
 	display: inline-block;
 	width: 100%;
 	height: 100px;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#9acd32));
-	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#2b6777));
+	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
 }
 
 [data-readmore]+[data-readmore-toggle] {
@@ -1134,7 +1134,7 @@ a.qual__rate-name:hover {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 24px;
-	color: #87cefa;
+	color: #9acd32;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -1212,7 +1212,7 @@ a.qual__rate-name:hover {
 /* ---team--- */
 
 .team {
-	background: #9acd32 url('../img/can-wave.png') no-repeat 0 0 / cover;
+	background: #2b6777 url('../img/can-wave.png') no-repeat 0 0 / cover;
 	position: relative;
 	padding: 140px 0 204px;
 	color: #fff;
@@ -1226,11 +1226,11 @@ a.qual__rate-name:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#9acd32));
-	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
-	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #9acd32 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 44, 234, 0)), to(#2b6777));
+	background: -webkit-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: -moz-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: -o-linear-gradient(top, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
+	background: linear-gradient(180deg, rgba(44, 44, 234, 0) 0%, #2b6777 100%);
 	z-index: 1;
 }
 
@@ -1345,7 +1345,7 @@ a.qual__rate-name:hover {
 }
 
 .count {
-	background: #9acd32;
+	background: #2b6777;
 	margin-top: -92px;
 	position: relative;
 	z-index: 3;
@@ -1399,7 +1399,7 @@ a.qual__rate-name:hover {
 
 .about {
 	padding: 51px 0 137px;
-	background: #9acd32;
+	background: #2b6777;
 }
 
 .about .title {
@@ -1876,7 +1876,7 @@ a.qual__rate-name:hover {
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 16px;
-	color: #87cefa;
+	color: #9acd32;
 }
 
 .slick-slide:focus {
@@ -2018,7 +2018,7 @@ a.qual__rate-name:hover {
 }
 
 .faq__title.open:before, .faq__title.open:after {
-	background: #9acd32;
+	background: #2b6777;
 }
 
 .faq__title.open::before {
@@ -2404,7 +2404,7 @@ a.qual__rate-name:hover {
 }
 
 .contacts__text a {
-	color: #87cefa;
+	color: #9acd32;
 	font-weight: 700;
 	line-height: 170%;
 }
@@ -2660,7 +2660,7 @@ a.qual__rate-name:hover {
 }
 
 .blog__card:hover .title-m {
-	color: #87cefa;
+	color: #9acd32;
 }
 
 .blog__meta {
@@ -2729,7 +2729,7 @@ a.qual__rate-name:hover {
 
 .err__page {
 	padding: 212px 0 140px;
-	background: #9acd32 url('../img/lines.png') no-repeat center center / cover;
+	background: #2b6777 url('../img/lines.png') no-repeat center center / cover;
 	margin-top: -110px;
 }
 
@@ -3223,7 +3223,7 @@ a.qual__rate-name:hover {
 }
 
 .chat__btn {
-	background: #9acd32;
+	background: #2b6777;
 	color: #fff;
 	font-weight: 700;
 	font-size: 12px;
@@ -3345,7 +3345,7 @@ a.qual__rate-name:hover {
 	max-width: 100%;
 }
 .bl-info__left a {
-    color: #9acd32;
+    color: #2b6777;
 }
 
 .footer_phone{

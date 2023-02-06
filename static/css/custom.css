@@ -77,7 +77,7 @@
     }
 
     .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
-        color: #87cefa;
+        color: #9acd32a;
         background: transparent;
     }
 
@@ -131,7 +131,7 @@
         justify-content: center;
         width: 182px;
         height: 48px;
-        background: #87cefa;
+        background: #9acd32a;
         border-radius: 4px;
         font-weight: bold;
         font-size: 14px;
@@ -362,7 +362,7 @@
     }
 
     .price-calculator .btn-group-level .btn-custom.active{
-        background: #394BEC!important;
+        background: #9acd32!important;
         margin: 0;
         padding: 19px 10px;
         border-radius: 4px!important;
@@ -378,7 +378,7 @@
     }
 
     .price-calculator .btn-group-lenght .btn-custom.active{
-        background: #394BEC!important;
+        background: #9acd32!important;
         border-radius: 4px!important;
     }
 
@@ -394,7 +394,7 @@
     }
 
     .btn-procide-calculator{
-        background: #87cefa;
+        background: #9acd32a;
         border-radius: 4px;
         width: 218px;
         height: 48px;
@@ -525,24 +525,24 @@
     }
 
     .datepricker-new-addon .datetimepicker-confirm{
-        background: #394BEC!important;
+        background: #9acd32!important;
     }
 
     .bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover{
-        background: #394BEC!important;
+        background: #9acd32!important;
     }
 
     .bootstrap-datetimepicker-widget .table-condensed .btn-primary{
-        background: #394BEC;
-        border: 1px solid #394BEC;
+        background: #9acd32;
+        border: 1px solid #9acd32;
     }
 
     .bootstrap-datetimepicker-widget table td span:hover, .bootstrap-datetimepicker-widget table td i:hover {
-        background: #394BEC;
+        background: #9acd32;
     }
 
     .table-condensed a {
-        color: #394BEC;
+        color: #9acd32;
     }
 
     @media (max-width: 453px){
